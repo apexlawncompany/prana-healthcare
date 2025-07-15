@@ -1,168 +1,445 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
+.heroSection,
+.expProvidersSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
   align-items: center;
+}
+
+.heroImage,
+.expProvidersBgImage {
+  z-index: 1;
+}
+
+.heroContent,
+.expProvidersContent {
+  z-index: 2;
+  position: relative;
+  color: #250037;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+}
+
+.expProvidersTitle {
+  font-size: 4.7rem;
+  line-height: 1;
+}
+
+.expProvidersSubtitle {
+  font-size: 1.5rem;
+  margin-top: 1.05em;
+  line-height: 1.4;
+}
+
+.helpCardSection {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  padding: 2rem;
+  background-color: #fef0ff;
+  gap: 2rem;
+  font-family: sans-serif;
+  min-height: 100vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+.heading {
+  font-size: 3.75em;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.main {
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.helpCard,
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  justify-content: space-between;
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+.helpCard h3,
+.card h3 {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  margin-bottom: 1em;
+  font-weight: bold;
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+.helpCard p,
+.card p {
+  line-height: 1.5;
+  color: #7f7f7f;
+  margin-bottom: 1.5rem;
 }
 
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
+.helpCardImageWrapper,
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.helpCardImage,
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  background-color: #9c2c9c;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  text-decoration: none;
   font-weight: 600;
 }
 
-.ctas {
-  display: flex;
-  gap: 16px;
+.button:hover {
+  border: 1px solid #9c2c9c; /* black border */
+  background-color: #fff;
+  color: #9c2c9c;
 }
 
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
+.collageSection {
+  background-color: #fff;
+}
+
+.collageContent {
   display: flex;
+  gap: 3rem;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.collageImageWrapper {
+  flex: 1 1 45%;
+  display: flex;
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
+}
+
+.collageImage {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.collageText {
+  flex: 1 1 50%;
+}
+
+.collageTitle {
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+  color: #1c1c1c;
+}
+
+.collageSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #3e3e3e;
   font-weight: 500;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.collageDescription {
+  font-size: 1rem;
+  color: #5a5a5a;
+  line-height: 1.6;
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
+.clinicalSection {
+  padding: 4rem 2rem;
+  background-color: #6b007a;
+  background-repeat: repeat;
+  color: white;
+  position: relative;
 }
 
-.footer {
-  grid-row-start: 3;
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tabs {
   display: flex;
-  gap: 24px;
+  justify-content: center;
 }
 
-.footer a {
+.tab {
+  background: white;
+  color: black;
+  padding: 2rem 14rem;
+  border-radius: 2rem 2rem 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.activeTab {
+  background: #facc15; /* Tailwind Yellow-400 */
+  color: black;
+}
+
+.tabContent {
+  background: white;
+  color: black;
+  border-radius: 0 0 25px 25px;
+  padding: 2rem;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.trialContent {
   display: flex;
+  gap: 2rem;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.footer img {
-  flex-shrink: 0;
+.textContent {
+  flex: 1;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
+.textContent h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.textContent h3 span {
+  color: #9222a2;
+}
 
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+.textContent p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: #9222a2;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.viewBtn {
+  display: inline-block;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+}
+
+.teamSection {
+  padding: 2rem 0;
+  background-color: #fefcf7;
+  text-align: center;
+}
+
+.teamTitle {
+  font-size: 3.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.teamSubtitle {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.serviceList {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.serviceList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceList li {
+  margin: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.serviceList li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #8e24aa;
+  font-weight: bold;
+}
+
+.teamGrid {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.teamCard h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.teamCard p {
+  font-size: 1.0625rem;
+  margin-top: 0.5em;
+  line-height: 1.3;
+  font-style: italic;
+  color: #444;
+}
+
+.profileImage {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .profileImage {
+  transform: scale(1.05);
+}
+
+.locateSection {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: "Overlock", cursive;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.locationCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.75rem;
+}
+
+.clinicName {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: left;
+}
+
+.address {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: #c648be;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
+@media (max-width: 768px) {
+  .trialContent {
     flex-direction: column;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
+  .tabs {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .page {
+    padding: 2rem 1rem;
+  }
+
+  .cardGrid {
+    gap: 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }
