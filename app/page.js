@@ -10,6 +10,7 @@ const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("future");
+  const [activeServiceTab, setActiveServiceTab] = useState(0);
   const handleTabClick = (tab) => setActiveTab(tab);
 
   const cardData = [
@@ -82,12 +83,61 @@ export default function Home() {
     {
       name: "Fayetteville Clinic",
       address: "200 Forsythe St, Fayetteville, NC 28303",
+      mobile: "910-824-7619",
+      mail: "info@prana.healthcare",
       image: "/home/address1.jpg",
     },
     {
       name: "Sanford Clinic",
       address: "4546 NC-87, Sanford, NC 27332, United States",
+      mobile: "919-935-0773",
+      mail: "info@prana.healthcare",
       image: "/home/address2.jpg",
+    },
+  ];
+
+  const services = [
+    {
+      name: "Primary Care",
+      icon: "/home/nurse.png",
+      description:
+        "Prana Health provides professionals with a wide skill set and experience to handle your primary and specialty medical care under one roof.",
+      images: "/home/home-primarycare.png",
+    },
+    {
+      name: "Urgent Care",
+      icon: "/home/nurse.png",
+      description:
+        "Immediate medical attention for non-life-threatening issues. We are here when you need us the most.",
+      images: "/home/home-primarycare.png",
+    },
+    {
+      name: "Pulmonary Services",
+      icon: "/home/nurse.png",
+      description:
+        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
+      images: "/home/home-primarycare.png",
+    },
+    {
+      name: "Pediatric sleep Services",
+      icon: "/home/nurse.png",
+      description:
+        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
+      images: "/home/home-primarycare.png",
+    },
+    {
+      name: "Adult Asthama & Allergies",
+      icon: "/home/nurse.png",
+      description:
+        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
+      images: "/home/home-primarycare.png",
+    },
+    {
+      name: "Adult Sleep Services",
+      icon: "/home/nurse.png",
+      description:
+        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
+      images: "/home/home-primarycare.png",
     },
   ];
 
@@ -110,7 +160,9 @@ export default function Home() {
       </section>
 
       <section className={styles.helpCardSection}>
-        <h1 className={`${styles.heading} ${overlock.className}`}>I need help</h1>
+        <h1 className={`${styles.heading} ${overlock.className}`}>
+          I need help
+        </h1>
         <div className={styles.cardGrid}>
           {cardData.map((card, index) => (
             <div key={index} className={styles.helpCard}>
@@ -123,7 +175,12 @@ export default function Home() {
                   className={styles.helpCardImage}
                 />
               </div>
-              <h3 className={`${overlock.className}`} style={{fontSize:"2rem"}}>{card.title}</h3>
+              <h3
+                className={`${overlock.className}`}
+                style={{ fontSize: "2rem" }}
+              >
+                {card.title}
+              </h3>
               <p>{card.description}</p>
               <Link href={card.href} className={styles.button}>
                 View More
@@ -252,8 +309,56 @@ export default function Home() {
         />
       </section>
 
+      <section className={styles.careSection}>
+        <h2 className={`${styles.serviceTitle} ${overlock.className}`}>
+          What We Care For
+        </h2>
+        <p className={styles.subtitle}>Primary Care and Urgent Care</p>
+
+        <div className={styles.servicetabs}>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`${styles.servicetab} ${
+                activeServiceTab === index ? styles.activeServiceTab : ""
+              }`}
+              onClick={() => setActiveServiceTab(index)}
+            >
+              <Image
+                src={service.icon}
+                alt={`${service.name} icon`}
+                width={72}
+                height={72}
+                className={styles.iconDoctor}
+              />
+              <span>{service.name}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.servicetabContent}>
+          <div className={styles.servicetrialContent}>
+            <div className={styles.servicetextContent}>
+              <h3>{services[activeServiceTab].name}</h3>
+              <p>{services[activeServiceTab].description}</p>
+              <button className={styles.servicecta}>Learn More</button>
+            </div>
+            <div className={styles.serviceimageWrapper}>
+              <Image
+                src={services[activeServiceTab].images}
+                alt={services[activeServiceTab].name}
+                width={600}
+                height={400}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.teamSection}>
-        <h2 className={`${styles.teamTitle} ${overlock.className}`}>Meet Our Team</h2>
+        <h2 className={`${styles.teamTitle} ${overlock.className}`}>
+          Meet Our Team
+        </h2>
         <p className={styles.teamSubtitle}>
           Our Providers are qualified to help with many behavioral health needs,
           including:
@@ -328,6 +433,8 @@ export default function Home() {
                 </div>
               </div>
               <p className={styles.address}>{clinic.address}</p>
+              <p className={styles.address}>{clinic.mobile}</p>
+              <p className={styles.address}>{clinic.mail}</p>
             </div>
           ))}
         </div>
