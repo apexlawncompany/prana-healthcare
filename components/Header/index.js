@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const services = [
   { title: "Primary Care", link: "/primary-care" },
-  { title: "Urgent Care", link: "/services/urgent-care" },
+  { title: "Urgent Care", link: "/urgent-care" },
   { title: "Allergy Testing & Treatment", link: "/services/urgent-care" },
   { title: "Pulmonary Services", link: "/services/pulmonary" },
   { title: "Pediatric Sleep Services", link: "/services/cardiology" },
