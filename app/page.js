@@ -19,63 +19,63 @@ export default function Home() {
       description:
         "Coughing all the time can be uncomfortable, keep you up at night...",
       image: "/home/cough-card.png",
-      href: "/rahul/i-cannot-get-rid-of-my-cough",
+      href: "#",
     },
     {
       title: "I Worry About My Child's Sleep",
       description:
         "Sleep is an essential part of your child's health. We offer professional services.",
       image: "/home/child-sleep-card.png",
-      href: "/rahul/i-worry-about-my-childs-sleep",
+      href: "#",
     },
     {
       title: "I Can Not Sleep",
       description:
         "Dissatisfying sleep can be troubling and difficult to treat without proper help. How you sleep can impact almost every aspect of your health. Prana Health offers",
       image: "/home/cannot-sleep-card.png",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
     {
       title: "Why Am I So Tired?",
       description:
         "Whether you or your child feel unusually sleepy all the time, it can often be a sign of an underlying sleep",
       image: "/home/tired-card.png",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
     {
       title: "I Have Trouble Breathing.",
       description:
         "I feel short of breath but I am not sure why. Whether it is an issue involving the heart, lungs.",
       image: "/home/breathing-card.png",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
     {
       title: "I Am Concerned About Asthma.",
       description:
         "Whether for you or your child, we can talk with you about Asthma and how you can ease those symptoms.",
       image: "/home/asthama-card.png",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
     {
       title: "I Just Can't Lose Weight",
       description:
         "Can’t lose weight no matter what you try? Prana Health finds the real reason and helps you with a plan that works for you.",
       image: "/home/weight-loss-card.jpg",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
     {
       title: "Comprehensive Insomnia",
       description:
         "Insomnia is a sleep disorder in which you have trouble falling and/or staying asleep.",
       image: "/home/insomia-card.png",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
     {
       title: "I Am Not The Same Since I Had COVID",
       description:
         "Find out more about the coronavirus comprehensive evaluations we offer below",
       image: "/home/covid-card.png",
-      href: "/rahul/i-cannot-sleep",
+      href: "#",
     },
   ];
 

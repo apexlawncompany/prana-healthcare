@@ -1,3 +1,13 @@
+.headerArea {
+  /* width: 100%; */
+  padding: 0 20px;
+  position: fixed;
+  top:15px;
+  left:0;
+  width:100vw;
+  z-index: 1000;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -5,8 +15,20 @@
   padding: 1em;
   background: white;
   border-radius: 80px;
-  margin: 16px 16px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.scrolled {
+  top: 0;
+  padding: 0 !important;
+  transition: all 0.3s ease;
+}
+
+.shrink {
+  padding: 0 1.5em;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .logoContainer {
@@ -26,10 +48,15 @@
   color: black;
   text-decoration: none;
   position: relative;
+  line-height: 80px;
+}
+
+.link:hover{
+  color: #9c2c9c;
 }
 
 .link:hover::after,
-.link:focus::after {
+.link:focus::after { 
   content: "";
   position: absolute;
   bottom: -4px;
@@ -55,4 +82,43 @@
   background-color: #fff;
   color: #000;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  z-index: 999;
+}
+
+.menuItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menuItem:hover {
+  background-color: #e8d1f9;
+  color: #8c2bb9;
+}
+
+.divider {
+  margin: 0.25rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+  opacity: 0.5;
+}
+
 
