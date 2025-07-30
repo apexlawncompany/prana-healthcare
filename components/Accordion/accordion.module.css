@@ -1,0 +1,47 @@
+.accordionItem {
+  border-bottom: 1px solid #000;
+  padding: 1rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  margin-top: 0.5rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+.content p {
+  color: #7F7F7F;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.content ul {
+  padding-left: 2.2rem;
+  margin: 0;
+  color: black;
+}
+
+.content li {
+  list-style-type: disc;
+  margin-bottom: 0.3rem;
+}
+
