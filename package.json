@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "NODE_ENV=production npm run build",
+    "predeploy": " cross-env NODE_ENV=shjs npm run build",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "cross-env": "^10.0.0",
     "gh-pages": "^6.3.0"
   }
 }
