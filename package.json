@@ -1,5 +1,4 @@
 {
-  "homepage": "https://apexlawncompany.github.io/prana-healthcare",
   "name": "prana-healthcare",
   "version": "0.1.0",
   "private": true,
@@ -7,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run dev && git add -A ."
+    }
   },
   "dependencies": {
     "next": "15.3.5",
@@ -17,6 +20,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "husky": "^9.1.7"
   }
 }
