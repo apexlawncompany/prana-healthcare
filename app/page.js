@@ -229,7 +229,7 @@ export default function Home() {
             }`}
             onClick={() => handleTabClick("future")}
           >
-            Future Clinical Trial
+            Future Clinical Trials
           </div>
           <div
             className={`${styles.tab} ${
@@ -237,7 +237,7 @@ export default function Home() {
             }`}
             onClick={() => handleTabClick("ongoing")}
           >
-            Ongoing Clinical Trial
+            Ongoing Clinical Trials
           </div>
         </div>
 
