@@ -35,22 +35,25 @@ export default function Footer() {
           <h3>Services</h3>
           <ul>
             <li>
-              <Link href="/primary-care">Primary Care & Urgent Care</Link>
+              <Link href="/primary-care">Primary Care</Link>
             </li>
             <li>
-              <Link href="#">Allergy Testing & Treatment</Link>
+              <Link href="/urgent-care">Urgent Care</Link>
+            </li>
+            <li>
+              <Link href="/allergy-testing-treatment">Allergy Testing & Treatment</Link>
             </li>
             <li>
               <Link href="#">Pulmonary Services</Link>
             </li>
             <li>
-              <Link href="#">Pediatric Sleep Services</Link>
+              <Link href="/pediatric-sleep-services">Pediatric Sleep Services</Link>
             </li>
             <li>
-              <Link href="#">Adult Sleep Disorders</Link>
+              <Link href="/adult-sleep-disorders">Adult Sleep Disorders</Link>
             </li>
             <li>
-              <Link href="#">Pediatric Adult Asthma</Link>
+              <Link href="/pediatric-adult-ashtma">Pediatric Adult Asthma</Link>
             </li>
             <li>
               <Link href="#">Long-Covid Evaluation</Link>
