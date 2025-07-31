@@ -36,38 +36,6 @@
   font-size: 3rem;
 }
 
-.highlight {
-  color: #92239f;
-  font-weight: 600;
-}
-
-.contactOptions {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.call,
-.onlieSchedule {
-  text-align: center;
-  margin-top: 1.5rem;
-}
-
-.callDetails {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  justify-content: center;
-  font-size: 1.5em;
-}
-
-.divider {
-  height: 100px;
-  width: 1px;
-  background-color: white;
-  margin: 0 2rem;
-}
 .infoSection {
   padding: 4rem 2rem;
   background-color: #fff;

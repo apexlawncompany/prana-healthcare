@@ -8,13 +8,13 @@ import Accordion from "@/components/Accordion";
 
 const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
 
-export default function PrimaryCare() {
+export default function UrgentCare() {
   return (
-    <main className={styles.primaryCare}>
+    <main className={styles.main}>
       <section className={styles.hero}>
         <Image
           src="/urgentCare/urgentcare-banner.jpg"
-          alt="Doctor Background"
+          alt="Urgentcare Banner"
           layout="fill"
           objectFit="cover"
           quality={100}
@@ -87,7 +87,7 @@ export default function PrimaryCare() {
           <div className={styles.imageSide}>
             <Image
               src="/urgentCare/urgentcare.jpg"
-              alt="Doctor Consultation"
+              alt="urgentcare"
               width={570}
               height={350}
               className={styles.infoImage}
