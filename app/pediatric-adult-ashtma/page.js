@@ -12,7 +12,7 @@ export default function PediatricAduleAsthma() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/asthama-bannaer.jpg"
+          src="/primaryCare/pulomonary-banner.jpg"
           alt="Asthma Banner"
           layout="fill"
           objectFit="cover"

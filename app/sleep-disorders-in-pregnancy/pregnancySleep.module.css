@@ -5,7 +5,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -36,49 +36,52 @@
   font-size: 3rem;
 }
 
+.highlight {
+  color: #92239f;
+  font-weight: 600;
+}
+
+.contactOptions {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.call,
+.onlieSchedule {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.callDetails {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.divider {
+  height: 100px;
+  width: 1px;
+  background-color: white;
+  margin: 0 2rem;
+}
+
 .infoSection {
-  padding: 2rem;
-  background-color: #fff;
+  padding: 4rem 2rem;
   color: #333;
 }
 
-.sectionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* for responsive stacking on smaller screens */
-  padding: 0 0 2rem;
-}
-
-.sectionHeader > div:first-child {
-  flex: 1;
-  min-width: 300px;
-}
-
-.headerImage {
+.infoImage {
+  /* width: auto;
+  height: auto; */
+  object-fit: cover;
   border-radius: 5%;
 }
 
-.image {
-  flex: 0 0 35%; /* Image takes ~35% of the space */
-  text-align: right;
-  min-width: 280px;
-}
-
-.infoImage {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.sectionHeader h1 {
-  font-size: 3rem;
-  color: black;
-}
-
-.sectionHeader p {
+.accordionSide p {
   font-size: 1.1rem;
   margin: 0.5rem auto 0;
   line-height: 1.5;
@@ -93,20 +96,18 @@
   align-items: flex-start;
 }
 
+.imageSide {
+  flex: 0 0 40%;
+  min-width: 280px;
+}
+
 .accordionSide {
   flex: 1; /* Text takes remaining ~65% */
-  min-width: 320px;
+  min-width: 340px;
 }
 
 .accordionSide h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: black;
-}
-
-.accordionSide h2 {
-  font-weight: 400;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: black;
 }
