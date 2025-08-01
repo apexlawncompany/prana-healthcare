@@ -44,7 +44,7 @@ export default function Footer() {
               <Link href="/allergy-testing-treatment">Allergy Testing & Treatment</Link>
             </li>
             <li>
-              <Link href="#">Pulmonary Services</Link>
+              <Link href="/pulmonary-services">Pulmonary Services</Link>
             </li>
             <li>
               <Link href="/pediatric-sleep-services">Pediatric Sleep Services</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               <Link href="#">Long-Covid Evaluation</Link>
             </li>
             <li>
-              <Link href="#">Sleep Disorders in Pregnancy</Link>
+              <Link href="/sleep-disorders-in-pregnancy">Sleep Disorders in Pregnancy</Link>
             </li>
           </ul>
         </div>

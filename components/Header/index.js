@@ -11,12 +11,12 @@ const services = [
   { title: "Primary Care", link: "/primary-care" },
   { title: "Urgent Care", link: "/urgent-care" },
   { title: "Allergy Testing & Treatment", link: "/allergy-testing-treatment" },
-  { title: "Pulmonary Services", link: "/services/pulmonary" },
+  { title: "Pulmonary Services", link: "/pulmonary-services" },
   { title: "Pediatric Sleep Services", link: "/pediatric-sleep-services" },
   { title: "Adult Sleep Disorders", link: "/adult-sleep-disorders" },
   { title: "Adult & Pediatric Asthama", link: "/pediatric-adult-ashtma" },
   { title: "Long-Covid Evaluations", link: "/services/gastroenterology" },
-  { title: "Sleep Disorders In Pregnant Women", link: "/services/dermatology" },
+  { title: "Sleep Disorders In Pregnant Women", link: "/sleep-disorders-in-pregnancy" },
 ];
 
 const clinicalTrials = [
