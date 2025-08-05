@@ -41,13 +41,17 @@ export default function Footer() {
               <Link href="/urgent-care">Urgent Care</Link>
             </li>
             <li>
-              <Link href="/allergy-testing-treatment">Allergy Testing & Treatment</Link>
+              <Link href="/allergy-testing-treatment">
+                Allergy Testing & Treatment
+              </Link>
             </li>
             <li>
               <Link href="/pulmonary-services">Pulmonary Services</Link>
             </li>
             <li>
-              <Link href="/pediatric-sleep-services">Pediatric Sleep Services</Link>
+              <Link href="/pediatric-sleep-services">
+                Pediatric Sleep Services
+              </Link>
             </li>
             <li>
               <Link href="/adult-sleep-disorders">Adult Sleep Disorders</Link>
@@ -56,10 +60,12 @@ export default function Footer() {
               <Link href="/pediatric-adult-ashtma">Pediatric Adult Asthma</Link>
             </li>
             <li>
-              <Link href="#">Long-Covid Evaluation</Link>
+              <Link href="/long-covid-evaluations">Long-Covid Evaluation</Link>
             </li>
             <li>
-              <Link href="/sleep-disorders-in-pregnancy">Sleep Disorders in Pregnancy</Link>
+              <Link href="/sleep-disorders-in-pregnancy">
+                Sleep Disorders in Pregnancy
+              </Link>
             </li>
           </ul>
         </div>
@@ -134,7 +140,7 @@ export default function Footer() {
               <Image src="/tik-tok.png" alt="Facebook" width={16} height={16} />
             </a>
             <a href="https://youtube.com" target="_blank">
-              <Image src="/youtube.png" alt="Facebook" width={16 } height={16} />
+              <Image src="/youtube.png" alt="Facebook" width={16} height={16} />
             </a>
             <a href="https://instagram.com" target="_blank">
               <Image

@@ -15,8 +15,11 @@ const services = [
   { title: "Pediatric Sleep Services", link: "/pediatric-sleep-services" },
   { title: "Adult Sleep Disorders", link: "/adult-sleep-disorders" },
   { title: "Adult & Pediatric Asthama", link: "/pediatric-adult-ashtma" },
-  { title: "Long-Covid Evaluations", link: "/services/gastroenterology" },
-  { title: "Sleep Disorders In Pregnant Women", link: "/sleep-disorders-in-pregnancy" },
+  { title: "Long-Covid Evaluations", link: "/long-covid-evaluations" },
+  {
+    title: "Sleep Disorders In Pregnant Women",
+    link: "/sleep-disorders-in-pregnancy",
+  },
 ];
 
 const clinicalTrials = [
