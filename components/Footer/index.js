@@ -80,7 +80,7 @@ export default function Footer() {
                 <br />
                 <span className={styles.locationLine}>
                   <Image
-                    src="/location-pin.png"
+                    src="/icons/location-pin.png"
                     alt="Location pin"
                     width={16}
                     height={16}
@@ -96,7 +96,7 @@ export default function Footer() {
                 <br />
                 <span className={styles.locationLine}>
                   <Image
-                    src="/location-pin.png"
+                    src="/icons/location-pin.png"
                     alt="Location pin"
                     width={16}
                     height={16}
@@ -112,7 +112,7 @@ export default function Footer() {
                 <br />
                 <span className={styles.locationLine}>
                   <Image
-                    src="/location-pin.png"
+                    src="/icons/location-pin.png"
                     alt="Location pin"
                     width={16}
                     height={16}
@@ -130,21 +130,21 @@ export default function Footer() {
           <div className={styles.socials}>
             <a href="https://facebook.com" target="_blank">
               <Image
-                src="/facebook (1).png"
+                src="/icons/facebook (1).png"
                 alt="Facebook"
                 width={16}
                 height={16}
               />
             </a>
             <a href="https://tiktok.com" target="_blank">
-              <Image src="/tik-tok.png" alt="Facebook" width={16} height={16} />
+              <Image src="/icons/tik-tok.png" alt="Facebook" width={16} height={16} />
             </a>
             <a href="https://youtube.com" target="_blank">
-              <Image src="/youtube.png" alt="Facebook" width={16} height={16} />
+              <Image src="/icons/youtube.png" alt="Facebook" width={16} height={16} />
             </a>
             <a href="https://instagram.com" target="_blank">
               <Image
-                src="/instagram.png"
+                src="/icons/instagram.png"
                 alt="Facebook"
                 width={16}
                 height={16}
@@ -153,11 +153,11 @@ export default function Footer() {
           </div>
           <div className={styles.contact}>
             <p>
-              <Image src="/call.png" alt="Facebook" width={16} height={16} />{" "}
+              <Image src="/icons/call.png" alt="Facebook" width={16} height={16} />{" "}
               (910) 824-7619
             </p>
             <p>
-              <Image src="/email.png" alt="Facebook" width={16} height={16} />{" "}
+              <Image src="/icons/email.png" alt="Facebook" width={16} height={16} />{" "}
               info@prana.healthcare
             </p>
           </div>

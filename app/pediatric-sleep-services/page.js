@@ -12,7 +12,7 @@ export default function PediatricSleepServices() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/pediatric-banner.png"
+          src="/servicesOptions/pediatric-banner.png"
           alt="Pediatric Banner"
           layout="fill"
           objectFit="cover"
@@ -41,7 +41,7 @@ export default function PediatricSleepServices() {
         <div className={styles.contentWrapper}>
           <div className={styles.imageSide}>
             <Image
-              src="/primaryCare/pediatric-sleep.jpg"
+              src="/servicesOptions/pediatric-sleep.jpg"
               alt="Pediatric Sleep"
               width={570}
               height={350}

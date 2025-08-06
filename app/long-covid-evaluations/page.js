@@ -13,7 +13,7 @@ export default function LongCovidEvaluations() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/long-covid-evaluation-bannerr.png"
+          src="/servicesOptions/long-covid-evaluation-bannerr.png"
           alt="Long Covid Evaluation Banner"
           layout="fill"
           objectFit="cover"
@@ -78,32 +78,32 @@ export default function LongCovidEvaluations() {
           <div className={styles.gallery}>
             {[
               {
-                src: "/primaryCare/long-covid-galleryImg1.jpg",
+                src: "/servicesOptions/long-covid-galleryImg1.jpg",
                 alt: "Lung Function",
                 label: "Evaluation of their lung function",
               },
               {
-                src: "/primaryCare/long-covid-galleryImg2.jpg",
+                src: "/servicesOptions/long-covid-galleryImg2.jpg",
                 alt: "Lung Inflammation",
                 label: "Lung inflammation evaluation",
               },
               {
-                src: "/primaryCare/long-covid-galleryImg3.jpg",
+                src: "/servicesOptions/long-covid-galleryImg3.jpg",
                 alt: "Neuro Testing",
                 label: "Neurocognitive testing",
               },
               {
-                src: "/primaryCare/long-covid-galleryImg4.jpg",
+                src: "/servicesOptions/long-covid-galleryImg4.jpg",
                 alt: "Sleep Eval",
                 label: "Sleep evaluation at home",
               },
               {
-                src: "/primaryCare/long-covid-galleryImg5.jpg",
+                src: "/servicesOptions/long-covid-galleryImg5.jpg",
                 alt: "Nutrition",
                 label: "Nutritional counseling",
               },
               {
-                src: "/primaryCare/long-covid-galleryImg6.jpg",
+                src: "/servicesOptions/long-covid-galleryImg6.jpg",
                 alt: "Therapy",
                 label: "Physical Therapy",
               },

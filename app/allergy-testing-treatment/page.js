@@ -12,7 +12,7 @@ export default function AllergyTesting() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/allergy-banner.jpg"
+          src="/servicesOptions/allergy-banner.jpg"
           alt="Allergy Banner"
           layout="fill"
           objectFit="cover"
@@ -46,7 +46,7 @@ export default function AllergyTesting() {
         <div className={styles.contentWrapper}>
           <div className={styles.imageSide}>
             <Image
-              src="/primaryCare/allergy.jpg"
+              src="/servicesOptions/allergy.jpg"
               alt="Allergy Testing"
               width={570}
               height={350}

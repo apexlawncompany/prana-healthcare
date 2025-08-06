@@ -9,10 +9,10 @@ const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
 
 export default function PrimaryCare() {
   return (
-    <main className={styles.primaryCare}>
+    <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/primarycare-doctor-banner.png"
+          src="/servicesOptions/primarycare-doctor-banner.png"
           alt="Doctor Background"
           layout="fill"
           objectFit="cover"
@@ -68,7 +68,7 @@ export default function PrimaryCare() {
         <div className={styles.collageContent}>
           <div className={styles.collageImageWrapper}>
             <Image
-              src="/primaryCare/primacrcare-main-img.png"
+              src="/servicesOptions/primacrcare-main-img.png"
               alt="Primary care collage"
               width={600}
               height={600}

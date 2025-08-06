@@ -1,5 +1,4 @@
 {
-  "homepage": "https://apexlawncompany.github.io/prana-healthcare",
   "name": "prana-healthcare",
   "version": "0.1.0",
   "private": true,
@@ -7,17 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": " cross-env NODE_ENV=shjs npm run build",
-    "deploy": "gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.3.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "cross-env": "^10.0.0",
-    "gh-pages": "^6.3.0"
+    "react-dom": "^19.0.0",
+    "next": "15.3.5"
   }
 }
