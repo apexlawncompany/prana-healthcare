@@ -12,7 +12,7 @@ export default function PulmonaryServices() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/pulomonary-banner.jpg"
+          src="/servicesOptions/pulomonary-banner.jpg"
           alt="Urgentcare Banner"
           layout="fill"
           objectFit="cover"

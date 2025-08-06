@@ -13,7 +13,7 @@ export default function UrgentCare() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/urgentCare/urgentcare-banner.jpg"
+          src="/servicesOptions/urgentcare-banner.jpg"
           alt="Urgentcare Banner"
           layout="fill"
           objectFit="cover"
@@ -86,7 +86,7 @@ export default function UrgentCare() {
         <div className={styles.contentWrapper}>
           <div className={styles.imageSide}>
             <Image
-              src="/urgentCare/urgentcare.jpg"
+              src="/servicesOptions/urgentcare.jpg"
               alt="urgentcare"
               width={570}
               height={350}

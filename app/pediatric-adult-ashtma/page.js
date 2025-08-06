@@ -12,7 +12,7 @@ export default function PediatricAduleAsthma() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/pulomonary-banner.jpg"
+          src="/servicesOptions/pulomonary-banner.jpg"
           alt="Asthma Banner"
           layout="fill"
           objectFit="cover"
@@ -61,7 +61,7 @@ export default function PediatricAduleAsthma() {
           </div>
           <div className={styles.imageSide}>
             <Image
-              src="/primaryCare/asthma1.webp"
+              src="/servicesOptions/asthma1.webp"
               alt="Pediatric Sleep"
               width={570}
               height={350}
@@ -73,7 +73,7 @@ export default function PediatricAduleAsthma() {
         <div className={styles.contentWrapper}>
           <div className={styles.image}>
             <Image
-              src="/primaryCare/asthma2.png"
+              src="/servicesOptions/asthma2.png"
               alt="Pediatric Sleep"
               width={570}
               height={350}

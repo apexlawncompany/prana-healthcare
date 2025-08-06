@@ -12,7 +12,7 @@ export default function AdultSleepDisorders() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/adultSleep-banner.png"
+          src="/servicesOptions/adultSleep-banner.png"
           alt="Adult Sleep Background"
           layout="fill"
           objectFit="cover"
@@ -34,7 +34,7 @@ export default function AdultSleepDisorders() {
         <div className={styles.contentWrapper}>
           <div className={styles.imageSide}>
             <Image
-              src="/primaryCare/adult-sleeping.png"
+              src="/servicesOptions/adult-sleeping.png"
               alt="Adult Sleeping"
               width={570}
               height={350}

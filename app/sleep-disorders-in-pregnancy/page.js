@@ -13,7 +13,7 @@ export default function PregnancySleepDisorders() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <Image
-          src="/primaryCare/pregnancy-banner.png"
+          src="/servicesOptions/pregnancy-banner.png"
           alt="pregnancy Banner"
           layout="fill"
           objectFit="cover"
@@ -78,7 +78,7 @@ export default function PregnancySleepDisorders() {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "url('/primaryCare/pregnancy-section-bg.jpg')",
+            backgroundImage: "url('/servicesOptions/pregnancy-section-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "blur(10px) brightness(1)",
@@ -93,7 +93,7 @@ export default function PregnancySleepDisorders() {
         >
           <div className={styles.imageSide}>
             <Image
-              src="/primaryCare/Pregnancy-And-Sleep.jpeg"
+              src="/servicesOptions/Pregnancy-And-Sleep.jpeg"
               alt="Pregnancy-And-Sleep"
               width={475}
               height={320}
