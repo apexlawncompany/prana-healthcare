@@ -64,15 +64,22 @@
   gap: 1.5rem;
 }
 
+.formSection h2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+
 .formSection select,
-.formSection button {
+.stepOneNextBtn {
   padding: 0.8rem;
   border-radius: 12px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
 
-.formSection button {
+.stepOneNextBtn {
   background: #92239f;
   color: white;
   border: none;
@@ -159,4 +166,63 @@
   transform: translateY(-50%) rotate(45deg);
   border-right: 2px solid #888;
   border-bottom: 2px solid #888;
+}
+
+.reservationDetails {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 1rem;
+}
+
+.reservationDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.reservationDetailsBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  line-height: 2;
+}
+
+.reservationDetailsFooter {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.removeBtn,
+.addMore {
+  background: white;
+  border: 1px solid #92239f;
+  color: #000;
+  padding: 12px 60px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.nextFinal {
+  padding: 12px 45px;
+  border-radius: 20px;
+  border: 1px solid #92239f;
+  background: #92239f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.userInfoInputField {
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  font-size: medium;
 }
