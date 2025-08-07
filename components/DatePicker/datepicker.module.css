@@ -1,0 +1,153 @@
+.container {
+  margin: auto;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: 1.75rem;
+  color: #222;
+}
+
+/* Main grid: 2-column layout */
+.gridWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Calendar styles */
+.calendar {
+  /* flex: 1; */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  min-width: 50%;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.calendarNav {
+  background: none !important;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.calendarNav:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+}
+
+.weekday {
+  text-align: center;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.day:hover {
+  background-color: #f7f7f7;
+}
+
+.disabled {
+  color: #7f7f7f;
+  pointer-events: none;
+  background-color: transparent !important;
+  font-weight: normal;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.today {
+  background: #569ff7;
+  color: #fff;
+  border-radius: 150px;
+}
+
+.selected {
+  background-color: #92239f;
+  color: white;
+  font-weight: bold;
+}
+
+/* Time grid styles */
+.timeGrid {
+  flex: 1;
+  max-height: 330px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 50%;
+}
+
+.timeButton {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc !important;
+  color: black !important;
+  background-color: #f7f7f7 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.selectedTime {
+  border: 2px solid #92239f !important;
+}
+
+/* Navigation Buttons */
+.controls {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  gap: 5px;
+}
+
+.backButton,
+.navButton {
+  padding: 10px 45px !important;
+  background-color: #92239f;
+  color: white;
+  border: none;
+  border-radius: 20px !important;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.backButton {
+  background-color: #fff !important;
+  border: 1px solid #92239f !important;
+  color: #000 !important;
+}
