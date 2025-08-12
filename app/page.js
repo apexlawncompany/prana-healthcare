@@ -4,11 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useState } from "react";
-import { Overlock } from "next/font/google";
+import { useRouter } from "next/navigation";
+import { Overlock, Noto_Serif } from "next/font/google";
 
 const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
+const noto_serif = Noto_Serif({ subsets: ["latin"], weight: ["500"] });
 
 export default function Home() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState("future");
   const [activeServiceTab, setActiveServiceTab] = useState(0);
   const handleTabClick = (tab) => setActiveTab(tab);
@@ -19,63 +22,63 @@ export default function Home() {
       description:
         "Coughing all the time can be uncomfortable, keep you up at night...",
       image: "/home/cough-card.png",
-      href: "#",
+      href: "/i-cant-get-rid-of-my-cough",
     },
     {
       title: "I Worry About My Child's Sleep",
       description:
         "Sleep is an essential part of your child's health. We offer professional services.",
       image: "/home/child-sleep-card.png",
-      href: "#",
+      href: "/i-worry-about-my-childs-sleep",
     },
     {
       title: "I Can Not Sleep",
       description:
         "Dissatisfying sleep can be troubling and difficult to treat without proper help. How you sleep can impact almost every aspect of your health. Prana Health offers",
       image: "/home/cannot-sleep-card.png",
-      href: "#",
+      href: "/i-cant-sleep",
     },
     {
       title: "Why Am I So Tired?",
       description:
         "Whether you or your child feel unusually sleepy all the time, it can often be a sign of an underlying sleep",
       image: "/home/tired-card.png",
-      href: "#",
+      href: "/why-am-i-so-tired",
     },
     {
       title: "I Have Trouble Breathing.",
       description:
         "I feel short of breath but I am not sure why. Whether it is an issue involving the heart, lungs.",
       image: "/home/breathing-card.png",
-      href: "#",
+      href: "/i-have-trouble-breathing",
     },
     {
       title: "I Am Concerned About Asthma.",
       description:
         "Whether for you or your child, we can talk with you about Asthma and how you can ease those symptoms.",
       image: "/home/asthama-card.png",
-      href: "#",
+      href: "/i-am-concerned-about-asthma",
     },
     {
       title: "I Just Can't Lose Weight",
       description:
         "Can’t lose weight no matter what you try? Prana Health finds the real reason and helps you with a plan that works for you.",
       image: "/home/weight-loss-card.jpg",
-      href: "#",
+      href: "/i-just-cant-lose-weight",
     },
     {
       title: "Comprehensive Insomnia",
       description:
         "Insomnia is a sleep disorder in which you have trouble falling and/or staying asleep.",
       image: "/home/insomia-card.png",
-      href: "#",
+      href: "/comprehensive-insomnia",
     },
     {
       title: "I Am Not The Same Since I Had COVID",
       description:
         "Find out more about the coronavirus comprehensive evaluations we offer below",
       image: "/home/covid-card.png",
-      href: "#",
+      href: "/long-covid-evaluations",
     },
   ];
 
@@ -220,11 +223,13 @@ export default function Home() {
       </section>
 
       <section className={styles.clinicalSection}>
-        <h2 className={styles.sectionTitle}>Clinical Trials</h2>
+        <h2 className={`${styles.sectionTitle} ${overlock.className}`}>
+          Clinical Trials
+        </h2>
 
         <div className={styles.tabs}>
           <div
-            className={`${styles.tab} ${
+            className={`${styles.tab} ${overlock.className} ${
               activeTab === "future" ? styles.activeTab : ""
             }`}
             onClick={() => handleTabClick("future")}
@@ -232,7 +237,7 @@ export default function Home() {
             Future Clinical Trials
           </div>
           <div
-            className={`${styles.tab} ${
+            className={`${styles.tab} ${overlock.className} ${
               activeTab === "ongoing" ? styles.activeTab : ""
             }`}
             onClick={() => handleTabClick("ongoing")}
@@ -245,7 +250,7 @@ export default function Home() {
           {activeTab === "future" ? (
             <div className={styles.trialContent}>
               <div className={styles.textContent}>
-                <h3>
+                <h3 className={`${overlock.className}`}>
                   Future <span>Clinical Trial</span>
                 </h3>
                 <p>
@@ -266,14 +271,14 @@ export default function Home() {
           ) : (
             <div className={styles.trialContent}>
               <div className={styles.textContent}>
-                <h3>
+                <h3 className={`${overlock.className}`}>
                   Ongoing <span>Clinical Trial</span>
                 </h3>
                 <p>
                   Currently running clinical studies you can participate in.
                   Find help and contribute to medical research.
                 </p>
-                <button className={styles.cta}>Join Now</button>
+                <button className={styles.cta}>I am interested</button>
               </div>
               <div className={styles.imageWrapper}>
                 <Image
@@ -293,11 +298,17 @@ export default function Home() {
           <h1 className={`${styles.expProvidersTitle} ${overlock.className}`}>
             Get Better With Our Experienced providers!
           </h1>
-          <p className={styles.expProvidersSubtitle}>
+          <p className={`${styles.expProvidersSubtitle} ${noto_serif.className}`} >
             Depending on the nature of your problem, our doctors can be an ideal
             choice for addressing your concerns.
           </p>
-          <button className={styles.viewBtn}>View More</button>
+          <br />
+          <button
+            className={styles.viewBtn}
+            onClick={() => router.push("/services")}
+          >
+            View More
+          </button>
         </div>
         <Image
           src="/home/exp-providers.png"
