@@ -5,10 +5,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Overlock, Noto_Serif } from "next/font/google";
-
-const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
-const noto_serif = Noto_Serif({ subsets: ["latin"], weight: ["500"] });
+import Locations from "@/components/Locations";
 
 export default function Home() {
   const router = useRouter();
@@ -82,65 +79,48 @@ export default function Home() {
     },
   ];
 
-  const clinics = [
-    {
-      name: "Fayetteville Clinic",
-      address: "200 Forsythe St, Fayetteville, NC 28303",
-      mobile: "910-824-7619",
-      mail: "info@prana.healthcare",
-      image: "/home/address1.jpg",
-    },
-    {
-      name: "Sanford Clinic",
-      address: "4546 NC-87, Sanford, NC 27332, United States",
-      mobile: "919-935-0773",
-      mail: "info@prana.healthcare",
-      image: "/home/address2.jpg",
-    },
-  ];
-
   const services = [
     {
       name: "Primary Care",
       icon: "/home/nurse.png",
       description:
-        "Prana Health provides professionals with a wide skill set and experience to handle your primary and specialty medical care under one roof.",
+        "Prana Health provides professionals with a wide skill set and experience to handle your primary and specialty medical care under one roof. From sleep problems, allergy issues, weight management, breathing issues, and more. Our board-certified providers offer the care you deserve",
       images: "/home/home-primarycare.png",
     },
     {
       name: "Urgent Care",
       icon: "/home/nurse.png",
       description:
-        "Immediate medical attention for non-life-threatening issues. We are here when you need us the most.",
-      images: "/home/home-primarycare.png",
+        "Urgent care refers to medical attention that is needed for an illness or injury that is not serious enough to warrant a visit to an emergency room, but still requires prompt attention. Examples of conditions that may be treated at an urgent care center include minor cuts and burns, sprains and strains, fever or flu-like symptoms, and mild asthma attacks.",
+      images: "/home/exp-providers.png",
     },
     {
       name: "Pulmonary Services",
       icon: "/home/nurse.png",
       description:
-        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
-      images: "/home/home-primarycare.png",
+        "Prana Health offers evaluation, diagnosis, and treatment related to diseases of the lungs. Some examples are asthma, cough, lung cancer, pulmonary fibrosis, pulmonary hypertension, and Chronic Obstructive Pulmonary Disorder (COPD).",
+      images: "/home/serviceTab-Pulmonary.jpg",
     },
     {
       name: "Pediatric sleep Services",
       icon: "/home/nurse.png",
       description:
-        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
-      images: "/home/home-primarycare.png",
+        "Children present symptoms for sleep apnea differently than adults. Some symptoms can be heavy breathing, restless sleep, coughing, or mouth breathing.<br /><br />Children will not usually snore loudly nor exhibit noticeable pauses in their breathing. Sleep apnea increases the risk of high blood pressure and heart disease in children. It can also worsen seizures and affect asthma control. If left undiagnosed, the child’s brain cells can be greatly affected; causing a decline in their IQ more than lead poisoning.",
+      images: "/home/serviceTab-sleep.jpg",
     },
     {
       name: "Adult Asthama & Allergies",
       icon: "/home/nurse.png",
       description:
-        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
-      images: "/home/home-primarycare.png",
+        "Asthma can make breathing difficult due to inflammation in the airways. Children have smaller airways that can become easily inflamed when exposed to any triggers.<br /><br />Inhalation of pollen, a cold, allergens, exercise, or even seasons of weather can all be asthma triggers. Asthma interferes with day to day activities, sports, school, and sleep.",
+      images: "/home/serviceTab-asthma.jpg", 
     },
     {
       name: "Adult Sleep Services",
       icon: "/home/nurse.png",
       description:
-        "Support for asthma, bronchitis, and other pulmonary concerns using latest diagnostic and treatment options.",
-      images: "/home/home-primarycare.png",
+        "A sleep disorder can be from abnormal sleeping patterns, or from not getting enough or too much sleep. The transition of sleeping to waking can bring on hallucinations and paralysis.<br /><br />Some sleep disorders can affect some psychiatric disorders, medical or neurological disorders. Your breathing can be affected if you have a breathing related sleep disorder, while the neurological system is affected if you have a movement related sleep disorder.",
+      images: "/home/serviceTab-adult-sleeping.png",
     },
   ];
 
@@ -148,7 +128,7 @@ export default function Home() {
     <main>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={`${styles.heroTitle} ${overlock.className}`}>
+          <h1 className={`font-overlock ${styles.heroTitle}`}>
             Multi-Specialty Clinic
           </h1>
         </div>
@@ -163,7 +143,7 @@ export default function Home() {
       </section>
 
       <section className={styles.helpCardSection}>
-        <h1 className={`${styles.heading} ${overlock.className}`}>
+        <h1 className={`font-overlock ${styles.heading}`}>
           I need help
         </h1>
         <div className={styles.cardGrid}>
@@ -179,7 +159,7 @@ export default function Home() {
                 />
               </div>
               <h3
-                className={`${overlock.className}`}
+                className={`font-overlock`}
                 style={{ fontSize: "2rem" }}
               >
                 {card.title}
@@ -205,10 +185,10 @@ export default function Home() {
             />
           </div>
           <div className={styles.collageText}>
-            <h2 className={`${styles.collageTitle} ${overlock.className}`}>
+            <h2 className={`font-overlock ${styles.collageTitle}`}>
               The right care for your journey to recovery
             </h2>
-            <h4 className={styles.collageSubtitle}>
+            <h4 className={`font-noto-serif ${styles.collageSubtitle}`}>
               Dedicated to your healthcare and wellness
             </h4>
             <p className={styles.collageDescription}>
@@ -223,13 +203,13 @@ export default function Home() {
       </section>
 
       <section className={styles.clinicalSection}>
-        <h2 className={`${styles.sectionTitle} ${overlock.className}`}>
+        <h2 className={`${styles.sectionTitle} font-overlock`}>
           Clinical Trials
         </h2>
 
         <div className={styles.tabs}>
           <div
-            className={`${styles.tab} ${overlock.className} ${
+            className={`${styles.tab} font-overlock ${
               activeTab === "future" ? styles.activeTab : ""
             }`}
             onClick={() => handleTabClick("future")}
@@ -237,7 +217,7 @@ export default function Home() {
             Future Clinical Trials
           </div>
           <div
-            className={`${styles.tab} ${overlock.className} ${
+            className={`${styles.tab} font-overlock ${
               activeTab === "ongoing" ? styles.activeTab : ""
             }`}
             onClick={() => handleTabClick("ongoing")}
@@ -250,28 +230,29 @@ export default function Home() {
           {activeTab === "future" ? (
             <div className={styles.trialContent}>
               <div className={styles.textContent}>
-                <h3 className={`${overlock.className}`}>
+                <h3 className={`font-overlock`}>
                   Future <span>Clinical Trial</span>
                 </h3>
                 <p>
                   Non-invasive treatments and therapies specifically designed
                   for pregnant women.
                 </p>
-                <button className={styles.cta}>I am interested</button>
+                <button className={styles.intrestedBtn}>I am interested</button>
               </div>
               <div className={styles.imageWrapper}>
                 <Image
                   src="/home/clinical-trail.png"
                   alt="Future Trial"
-                  width={600}
-                  height={400}
+                  width={550}
+                  height={500}
+                  className={styles.clinicalImage}
                 />
               </div>
             </div>
           ) : (
             <div className={styles.trialContent}>
               <div className={styles.textContent}>
-                <h3 className={`${overlock.className}`}>
+                <h3 className={`font-overlock`}>
                   Ongoing <span>Clinical Trial</span>
                 </h3>
                 <p>
@@ -284,8 +265,9 @@ export default function Home() {
                 <Image
                   src="/home/clinical-trail-2.png"
                   alt="Ongoing Trial"
-                  width={600}
-                  height={400}
+                  width={550}
+                  height={500}
+                  className={styles.clinicalImage}
                 />
               </div>
             </div>
@@ -295,10 +277,12 @@ export default function Home() {
 
       <section className={styles.expProvidersSection}>
         <div className={styles.expProvidersContent}>
-          <h1 className={`${styles.expProvidersTitle} ${overlock.className}`}>
+          <h1 className={`${styles.expProvidersTitle} font-overlock`}>
             Get Better With Our Experienced providers!
           </h1>
-          <p className={`${styles.expProvidersSubtitle} ${noto_serif.className}`} >
+          <p
+            className={`font-noto-serif ${styles.expProvidersSubtitle}`}
+          >
             Depending on the nature of your problem, our doctors can be an ideal
             choice for addressing your concerns.
           </p>
@@ -320,57 +304,11 @@ export default function Home() {
         />
       </section>
 
-      <section className={styles.careSection}>
-        <h2 className={`${styles.serviceTitle} ${overlock.className}`}>
-          What We Care For
-        </h2>
-        <p className={styles.subtitle}>Primary Care and Urgent Care</p>
-
-        <div className={styles.servicetabs}>
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`${styles.servicetab} ${
-                activeServiceTab === index ? styles.activeServiceTab : ""
-              }`}
-              onClick={() => setActiveServiceTab(index)}
-            >
-              <Image
-                src={service.icon}
-                alt={`${service.name} icon`}
-                width={72}
-                height={72}
-                className={styles.iconDoctor}
-              />
-              <span>{service.name}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.servicetabContent}>
-          <div className={styles.servicetrialContent}>
-            <div className={styles.servicetextContent}>
-              <h3>{services[activeServiceTab].name}</h3>
-              <p>{services[activeServiceTab].description}</p>
-              <button className={styles.servicecta}>Learn More</button>
-            </div>
-            <div className={styles.serviceimageWrapper}>
-              <Image
-                src={services[activeServiceTab].images}
-                alt={services[activeServiceTab].name}
-                width={600}
-                height={400}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className={styles.teamSection}>
-        <h2 className={`${styles.teamTitle} ${overlock.className}`}>
+        <h2 className={`${styles.teamTitle} font-overlock`}>
           Meet Our Team
         </h2>
-        <p className={styles.teamSubtitle}>
+        <p className={`font-noto-serif ${styles.teamSubtitle}`}>
           Our Providers are qualified to help with many behavioral health needs,
           including:
         </p>
@@ -421,35 +359,104 @@ export default function Home() {
                   className={styles.profileImage}
                 />
               </div>
-              <h3 className={`${overlock.className}`}>{member.name}</h3>
-              <p className={`${overlock.className}`}>{member.role}</p>
+              <h3 className={`font-overlock`}>{member.name}</h3>
+              <p className={`font-overlock`}>{member.role}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className={styles.locateSection}>
-        <h2 className={styles.title}>Locate us</h2>
-        <div className={styles.grid}>
-          {clinics.map((clinic, index) => (
-            <div key={index} className={styles.locationCard}>
-              <div>
-                <img
-                  src={clinic.image}
-                  alt={clinic.name}
-                  className={styles.image}
-                />
-                <div className={styles.overlay}>
-                  <p className={styles.clinicName}>{clinic.name}</p>
-                </div>
-              </div>
-              <p className={styles.address}>{clinic.address}</p>
-              <p className={styles.address}>{clinic.mobile}</p>
-              <p className={styles.address}>{clinic.mail}</p>
+      <section className={styles.careSection}>
+        <h2 className={`${styles.serviceTitle} font-overlock`}>
+          What We Care For
+        </h2>
+        <p className={`font-noto-serif ${styles.subtitle}`}>
+          <em>Primary Care and Urgent Care</em>
+        </p>
+
+        <div className={styles.servicetabs}>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`${styles.servicetab} ${
+                activeServiceTab === index ? styles.activeServiceTab : ""
+              }`}
+              onClick={() => setActiveServiceTab(index)}
+            >
+              <Image
+                src={service.icon}
+                alt={`${service.name} icon`}
+                width={72}
+                height={72}
+                className={styles.iconDoctor}
+              />
+              <span className={`font-overlock`}>{service.name}</span>
             </div>
           ))}
         </div>
+
+        <div className={styles.servicetabContent}>
+          <div className={styles.servicetrialContent}>
+            <div className={styles.servicetextContent}>
+              <h3 className={`font-overlock`}>
+                {services[activeServiceTab].name}
+              </h3>
+              <br />
+              <p dangerouslySetInnerHTML={{ __html: services[activeServiceTab].description }} />
+            </div>
+            <div className={styles.serviceimageWrapper}>
+              <Image
+                src={services[activeServiceTab].images}
+                alt={services[activeServiceTab].name}
+                width={550}
+                height={400}
+                className="${styles.serviceImage}"
+              />
+            </div>
+          </div>
+        </div>
       </section>
+
+      <section
+        className={styles.testimonialSection}
+        style={{ backgroundImage: "url('/home/testimonals.png')" }}
+      >
+        <div className={styles.testimonialOverlay}>
+          <blockquote className={`font-noto-serif`}>
+            <em>
+              “The help and company of good friends, the rediscovery of old
+              pleasures, the support of my family, being useful to others,
+              feeling part of the community – of old pleasures, these are all
+              essential factors in my recovery.”
+            </em>
+          </blockquote>
+        </div>
+        <div className={styles.testimonialAuthor}>
+          <p>
+            <strong>Melissa Cardoso</strong>
+          </p>
+          <span>-OCD</span>
+          <button
+            className={styles.watchStoryBtn}
+            onClick={() => router.push("/testimonials")}
+          >
+            <Image
+              src="/icons/play.png" // update the path if your icon is elsewhere
+              alt="Watch Video"
+              width={24}
+              height={24}
+              style={{
+                verticalAlign: "middle",
+                marginRight: "0.5em",
+                filter: "brightness(0) invert(1)",
+              }}
+            />
+            Watch Story
+          </button>
+        </div>
+      </section>
+
+      <Locations />
     </main>
   );
 }

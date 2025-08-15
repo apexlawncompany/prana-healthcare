@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { Overlock } from "next/font/google";
+import { Overlock, Noto_Serif } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -18,7 +18,13 @@ const geistMono = Geist_Mono({
 const overlock = Overlock({
   subsets: ["latin"],
   variable: "--font-overlock", // Optional: for using it in CSS
-  weight: ["400", "700"],      // Optional: Regular and Bold
+  weight: ["400", "700"],
+});
+
+const noto_serif = Noto_Serif({ 
+  subsets: ["latin"], 
+  variable: "--font-noto-serif",
+  weight: ["500"] 
 });
 
 const inter = Inter({

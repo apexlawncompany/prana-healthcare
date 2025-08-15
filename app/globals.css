@@ -1,6 +1,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #9c2c9c;
+  --color-accent: #9222a2;
+  --color-bg-light: #fef0ff;
+  --color-bg-dark: #6b007a;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey: #7f7f7f;
+  --font-overlock: 'Overlock', cursive;
+  --font-noto-serif: 'Noto Serif', serif;
+}
+
+.font-overlock {
+  font-family: var(--font-overlock);
+}
+
+.font-noto-serif {
+  font-family: var(--font-noto-serif);
 }
 
 @media (prefers-color-scheme: dark) {
