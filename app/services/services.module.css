@@ -1,0 +1,176 @@
+.main {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  z-index: 1;
+  object-position: top;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  color: white;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+}
+
+.infoSection {
+  background-color: #fcf4e7;
+  color: #333;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* for responsive stacking on smaller screens */
+  padding: 4em 2rem;
+}
+
+.sectionHeader > div:first-child {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sectionHeader h1 {
+  font-size: 3.75rem;
+}
+
+.sectionHeader h3 {
+  font-size: 1.375rem;
+  line-height: 1.4;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  align-items: stretch; /* Ensure all cards stretch to same height */
+}
+
+.card {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 30px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-height: 420px;   /* Set a min-height for all cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  background-color: #000;
+}
+
+.card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card:hover h2 {
+  color: #fff;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.viewMoreBtn {
+  background-color: #9c2c9c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin-top: auto;           /* This keeps the button at the bottom */
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.viewMoreBtn:hover {
+  background-color: #fff;
+  color:#9c2c9c;
+  border: 2px solid #9c2c9c;
+}
+
+.collageSection {
+  background-color: #fff;
+}
+
+.collageContent {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.collageImageWrapper {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.collageImage {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.collageText {
+  padding: 20px;
+  flex: 1 1 50%;
+}
+
+.collageTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1c1c1c;
+}
+
+.collageIntro {
+  color: #777;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-bottom: 1.3rem;
+}
+
+.collageList {
+  list-style-type: disc;
+  padding-left: 1.8rem;
+  color: #222;
+}
+
+.collageList li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.collageList li strong {
+  font-weight: 600;
+  color: #000;
+}

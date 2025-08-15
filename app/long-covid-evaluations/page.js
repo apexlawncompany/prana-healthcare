@@ -41,6 +41,7 @@ export default function LongCovidEvaluations() {
       <section className={styles.infoSection}>
         <div className={styles.sectionHeader}>
           <h1 className={overlock.className}>Long COVID - symptoms</h1>
+          <br />
           <p>
             Long COVID, also known as post-acute sequelae of SARS-CoV-2
             infection (PASC), refers to a range of symptoms that persist for
@@ -49,6 +50,7 @@ export default function LongCovidEvaluations() {
             multiple organ systems.
           </p>
           <p>Common symptoms of long COVID include:</p>
+          <br />
           <ul>
             <li>Fatigue and weakness</li>
             <li>Shortness of breath</li>
