@@ -16,9 +16,9 @@ const NotFound = () => {
         <h1 className={`${overlock.className}`}>
           Error <span>404</span>.
         </h1>
-        <a href="/" className={styles.homeBtn}>
+        <Link href="/" className={styles.homeBtn}>
           Back to Home
-        </a>
+        </Link>
       </div>
     </div>
   );
