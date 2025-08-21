@@ -199,7 +199,7 @@ export default function Footer() {
       <hr className={styles.divider} />
       <div className={`${styles.bottom} ${inter.className}`}>
         <p>©2025. Prana Health. All rights reserved | Powered by <Link href="https://apexship.net" target="_blank">Apexship</Link></p>
-        <Link href="/privacy-policy" className={styles.privacy}>Privacy Policy</Link>
+        <Link href="/privacy" className={styles.privacy}>Privacy Policy</Link>
       </div>
     </footer>
   );

@@ -2,6 +2,7 @@
 
 import styles from "./locations.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const locationsData = [
   {
@@ -37,38 +38,56 @@ export default function Locations() {
               />
             </div>
             <div className={styles.info}>
-              <div className={styles.item}>
-                <Image
-                  src="/icons/location (1).png"
-                  alt="Location"
-                  width={20}
-                  height={20}
-                  className={styles.icon}
-                />
-                <p className={styles.address}>{loc.address}</p>
-              </div>
+              <Link
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  loc.address
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className={styles.link}>
+                  <Image
+                    src="/icons/location (1).png"
+                    alt="Location"
+                    width={20}
+                    height={20}
+                    className={styles.icon}
+                  />{" "}
+                  <span className={`${styles.address} ${styles.underlineText}`}>
+                    {loc.address}
+                  </span>
+                </span>
+              </Link>
 
-              <div className={styles.item}>
-                <Image
-                  src="/icons/outgoing-call.png"
-                  alt="Phone"
-                  width={20}
-                  height={20}
-                  className={styles.icon}
-                />
-                <p className={styles.phone}>{loc.phone}</p>
-              </div>
+              <Link href={`tel:${loc.phone}`}>
+                <span className={styles.link}>
+                  <Image
+                    src="/icons/outgoing-call.png"
+                    alt="Phone"
+                    width={20}
+                    height={20}
+                    className={styles.icon}
+                  />{" "}
+                  <span className={`${styles.phone} ${styles.underlineText}`}>
+                    {loc.phone}
+                  </span>
+                </span>
+              </Link>
 
-              <div className={styles.item}>
-                <Image
-                  src="/icons/email.png"
-                  alt="Email"
-                  width={20}
-                  height={20}
-                  className={styles.icon}
-                />
-                <p className={styles.mail}>{loc.mail}</p>
-              </div>
+              <Link href={`mailto:${loc.mail}`}>
+                <span className={styles.link}>
+                  <Image
+                    src="/icons/email.png"
+                    alt="Email"
+                    width={20}
+                    height={20}
+                    className={styles.icon}
+                  />{" "}
+                  <span className={`${styles.mail} ${styles.underlineText}`}>
+                    {loc.mail}
+                  </span>
+                </span>
+              </Link>
 
               <div className={styles.item}>
                 <Image

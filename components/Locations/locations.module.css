@@ -32,11 +32,11 @@
   gap: 1rem;
 }
 
-.item {
+.item, .link {
+  gap: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
   padding: 0.5rem 0;
   font-size: 1.1rem;
   border-bottom: 1px solid #eee;
@@ -48,4 +48,16 @@
 
 .icon {
   flex-shrink: 0;
+}
+
+.underlineText {
+  background-image: linear-gradient(black, black);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover .underlineText {
+  background-size: 100% 2px;
 }

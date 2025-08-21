@@ -3,9 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Locations from "@/components/Locations";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function Home() {
   const router = useRouter();
@@ -113,7 +117,7 @@ export default function Home() {
       icon: "/home/nurse.png",
       description:
         "Asthma can make breathing difficult due to inflammation in the airways. Children have smaller airways that can become easily inflamed when exposed to any triggers.<br /><br />Inhalation of pollen, a cold, allergens, exercise, or even seasons of weather can all be asthma triggers. Asthma interferes with day to day activities, sports, school, and sleep.",
-      images: "/home/serviceTab-asthma.jpg", 
+      images: "/home/serviceTab-asthma.jpg",
     },
     {
       name: "Adult Sleep Services",
@@ -121,6 +125,29 @@ export default function Home() {
       description:
         "A sleep disorder can be from abnormal sleeping patterns, or from not getting enough or too much sleep. The transition of sleeping to waking can bring on hallucinations and paralysis.<br /><br />Some sleep disorders can affect some psychiatric disorders, medical or neurological disorders. Your breathing can be affected if you have a breathing related sleep disorder, while the neurological system is affected if you have a movement related sleep disorder.",
       images: "/home/serviceTab-adult-sleeping.png",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Cherie Felczer",
+      img: "/home/cherie.png",
+      text: "Prana Healthcare Expert helped me overcome sleep anxiety, and now my sleep is consistent. Skip the endless online content—go straight to Prana Healthcare Expert. It works!",
+    },
+    {
+      name: "Beatriz Rock",
+      img: "/home/beatriz.png",
+      text: "Prana Healthcare Expert helped me find the right coping mechanisms, leading to a huge improvement in my erratic sleep by addressing the root cause and stopping disruptive thoughts for lasting results.",
+    },
+    {
+      name: "Amanda Lerichi-Martinez",
+      img: "/home/amanda.png",
+      text: "After 17 years of severe insomnia and trying countless treatments, Prana Healthcare Expert transformed my sleep by addressing the root causes, helping me trust my body to fall asleep naturally.",
+    },
+    {
+      name: "Robin C Murray",
+      img: "/home/robin.png",
+      text: "After 10 years of poor sleep, Prana Healthcare Expert helped me address the mental side of insomnia, leading to the best sleep I've had in a decade.",
     },
   ];
 
@@ -143,9 +170,7 @@ export default function Home() {
       </section>
 
       <section className={styles.helpCardSection}>
-        <h1 className={`font-overlock ${styles.heading}`}>
-          I need help
-        </h1>
+        <h1 className={`font-overlock ${styles.heading}`}>I need help</h1>
         <div className={styles.cardGrid}>
           {cardData.map((card, index) => (
             <div key={index} className={styles.helpCard}>
@@ -158,10 +183,7 @@ export default function Home() {
                   className={styles.helpCardImage}
                 />
               </div>
-              <h3
-                className={`font-overlock`}
-                style={{ fontSize: "2rem" }}
-              >
+              <h3 className={`font-overlock`} style={{ fontSize: "2rem" }}>
                 {card.title}
               </h3>
               <p>{card.description}</p>
@@ -201,6 +223,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className={styles.waveDivider}>
+        <Image
+          src="/home/white_bottom_wave_01.png"
+          alt="Divider"
+          width={1920}
+          height={100}
+          priority
+        />
+      </div>
 
       <section className={styles.clinicalSection}>
         <h2 className={`${styles.sectionTitle} font-overlock`}>
@@ -280,9 +312,7 @@ export default function Home() {
           <h1 className={`${styles.expProvidersTitle} font-overlock`}>
             Get Better With Our Experienced providers!
           </h1>
-          <p
-            className={`font-noto-serif ${styles.expProvidersSubtitle}`}
-          >
+          <p className={`font-noto-serif ${styles.expProvidersSubtitle}`}>
             Depending on the nature of your problem, our doctors can be an ideal
             choice for addressing your concerns.
           </p>
@@ -305,9 +335,7 @@ export default function Home() {
       </section>
 
       <section className={styles.teamSection}>
-        <h2 className={`${styles.teamTitle} font-overlock`}>
-          Meet Our Team
-        </h2>
+        <h2 className={`${styles.teamTitle} font-overlock`}>Meet Our Team</h2>
         <p className={`font-noto-serif ${styles.teamSubtitle}`}>
           Our Providers are qualified to help with many behavioral health needs,
           including:
@@ -402,7 +430,11 @@ export default function Home() {
                 {services[activeServiceTab].name}
               </h3>
               <br />
-              <p dangerouslySetInnerHTML={{ __html: services[activeServiceTab].description }} />
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: services[activeServiceTab].description,
+                }}
+              />
             </div>
             <div className={styles.serviceimageWrapper}>
               <Image
@@ -415,6 +447,22 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <button
+          className={styles.viewAllBtn}
+          onClick={() => router.push("/services")}
+        >
+          View All Services
+          <Image
+            src="/icons/next.png"
+            alt="Next Icon"
+            width={16}
+            height={16}
+            style={{
+              verticalAlign: "middle",
+              marginLeft: "0.5em",
+            }}
+          />
+        </button>
       </section>
 
       <section
@@ -454,6 +502,43 @@ export default function Home() {
             Watch Story
           </button>
         </div>
+      </section>
+
+
+      <section className={styles.midtestimonialSection}>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={3}
+          spaceBetween={24}
+          loop={true}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          pagination={{ clickable: true, el: `.${styles.dots}` }}
+          className={styles.sliderContainer}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {testimonials.map((t, i) => (
+            <SwiperSlide key={i}>
+              <div className={styles.testimonialCard}>
+                <Image
+                  src={t.img}
+                  alt={t.name}
+                  width={64}
+                  height={64}
+                  className={styles.avatar}
+                />
+                <h3 className={styles.name}>{t.name}</h3>
+                <hr className={styles.divider} />
+                <span className={styles.quote}>”</span>
+                <p className={styles.text}>{t.text}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+          <div className={styles.dots}></div>
+        </Swiper>
       </section>
 
       <Locations />
