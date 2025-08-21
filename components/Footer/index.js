@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "./footer.module.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
-// import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +16,7 @@ export default function Footer() {
         backgroundSize: "cover",
       }}
     >
-      <div className={styles.overlay}></div>
+      {/* <div className={styles.overlay}></div> */}
 
       <div className={`${styles.content} ${inter.className}`}>
         {/* Logo */}
@@ -31,8 +30,8 @@ export default function Footer() {
         </div>
 
         {/* Services */}
-        <div className={`${styles.column}`}>
-          <h3>Services</h3>
+        <div className={`${styles.columnServices}`}>
+          <h3 className={`font-overlock`}>Services</h3>
           <ul>
             <li>
               <Link href="/primary-care">Primary Care</Link>
@@ -71,53 +70,57 @@ export default function Footer() {
         </div>
 
         {/* Locations */}
-        <div className={styles.column}>
-          <h3>Locations</h3>
+        <div className={styles.columnLocations}>
+          <h3 className={`font-overlock`}>Locations</h3>
           <ul>
             <li>
-              <Link href="/locations/fayetteville">
-                <strong>Fayetteville Clinic</strong>
-                <br />
-                <span className={styles.locationLine}>
+              <strong>Fayetteville Clinic</strong>
+              <Link href="https://maps.app.goo.gl/rNvvjaDjLy2ALfLS7" target="_blank">
+                <span className={styles.link}>
                   <Image
                     src="/icons/location-pin.png"
                     alt="Location pin"
                     width={16}
                     height={16}
                   />
-                  200 Forsythe St, Fayetteville, NC 28303
+                  <span className={styles.underlineText}>
+                    200 Forsythe St, Fayetteville, NC 28303
+                  </span>
                 </span>
               </Link>
             </li>
 
             <li>
-              <Link href="/locations/sanford">
-                <strong>Sanford Clinic</strong>
-                <br />
-                <span className={styles.locationLine}>
+              <strong>Sanford Clinic</strong>
+              <Link href="https://maps.app.goo.gl/U85iwW88X512Kr8w9" target="_blank">
+                <span className={styles.link}>
                   <Image
                     src="/icons/location-pin.png"
                     alt="Location pin"
                     width={16}
                     height={16}
                   />
-                  4546 NC-87, Sanford, NC 27332
+                  <span className={styles.underlineText}>
+                    4546 NC-87, Sanford, NC 27332, United States
+                  </span>
                 </span>
               </Link>
             </li>
 
             <li>
-              <Link href="/locations/raleigh">
-                <strong>Raleigh Clinic</strong>
-                <br />
-                <span className={styles.locationLine}>
+              <strong>Raleigh Clinic</strong>
+              <Link href="https://maps.app.goo.gl/9NJgzDFymnNG5xCk7" target="_blank">
+                <span className={styles.link}>
                   <Image
                     src="/icons/location-pin.png"
                     alt="Location pin"
                     width={16}
                     height={16}
                   />
-                  3906 Wake Forest Rd, Raleigh, NC 27609
+                  <span className={styles.underlineText}>
+                    Inside Triangle Sinus Center, 3906 Wake Forest Road,
+                    Raleigh, NC 27609
+                  </span>
                 </span>
               </Link>
             </li>
@@ -125,48 +128,78 @@ export default function Footer() {
         </div>
 
         {/* Connect */}
-        <div className={styles.column}>
-          <h3>Connect</h3>
+        <div className={styles.columnSocials}>
+          <h3 className={`font-overlock`}>Connect</h3>
           <div className={styles.socials}>
-            <a href="https://facebook.com" target="_blank">
+            <Link href="https://www.facebook.com/PranaNC/" target="_blank">
               <Image
                 src="/icons/facebook (1).png"
                 alt="Facebook"
-                width={16}
-                height={16}
+                width={20}
+                height={20}
               />
-            </a>
-            <a href="https://tiktok.com" target="_blank">
-              <Image src="/icons/tik-tok.png" alt="Facebook" width={16} height={16} />
-            </a>
-            <a href="https://youtube.com" target="_blank">
-              <Image src="/icons/youtube.png" alt="Facebook" width={16} height={16} />
-            </a>
-            <a href="https://instagram.com" target="_blank">
+            </Link>
+            <Link href="/contact">
+              <Image
+                src="/icons/tik-tok.png"
+                alt="Tik Tok"
+                width={20}
+                height={20}
+              />
+            </Link>
+            <Link href="/contact">
+              <Image
+                src="/icons/youtube.png"
+                alt="You Tube"
+                width={20}
+                height={20}
+              />
+            </Link>
+            <Link
+              href="https://www.instagram.com/prana.healthcare/"
+              target="_blank"
+            >
               <Image
                 src="/icons/instagram.png"
-                alt="Facebook"
-                width={16}
-                height={16}
+                alt="Instagram"
+                width={20}
+                height={20}
               />
-            </a>
+            </Link>
           </div>
-          <div className={styles.contact}>
-            <p>
-              <Image src="/icons/call.png" alt="Facebook" width={16} height={16} />{" "}
-              (910) 824-7619
-            </p>
-            <p>
-              <Image src="/icons/email.png" alt="Facebook" width={16} height={16} />{" "}
-              info@prana.healthcare
-            </p>
+          <div style={{margin:"1.5rem 0"}}>
+            <Link href="tel:9108247619">
+              <span className={styles.link}>
+                <Image
+                  src="/icons/call.png"
+                  alt="Phone"
+                  width={16}
+                  height={16}
+                />{" "}
+                <span className={styles.underlineText}>(910) 824-7619</span>
+              </span>
+            </Link>
+
+            <Link href="mailto:info@prana.healthcare">
+              <span className={styles.link}>
+                <Image
+                  src="/icons/email.png"
+                  alt="Email"
+                  width={16}
+                  height={16}
+                />{" "}
+                <span className={styles.underlineText}>
+                  info@prana.healthcare
+                </span>
+              </span>
+            </Link>
           </div>
         </div>
       </div>
       <hr className={styles.divider} />
       <div className={`${styles.bottom} ${inter.className}`}>
-        <p>©2025. Prana Health. All rights reserved | Powered by Apexship</p>
-        <Link href="/privacy-policy">Privacy Policy</Link>
+        <p>©2025. Prana Health. All rights reserved | Powered by <Link href="https://apexship.net" target="_blank">Apexship</Link></p>
+        <Link href="/privacy" className={styles.privacy}>Privacy Policy</Link>
       </div>
     </footer>
   );
