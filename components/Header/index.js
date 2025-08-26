@@ -31,12 +31,10 @@ export default function Header() {
   const [showServices, setShowServices] = useState(false);
   const [showTrials, setShowTrials] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -46,15 +44,26 @@ export default function Header() {
       className={`${styles.headerArea} ${scrolled ? styles.scrolled : ""}`}
     >
       <div className={`${styles.header} ${scrolled ? styles.shrink : ""}`}>
+        {/* Hamburger for Mobile */}
+        <div
+          className={styles.hamburger}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        {/* Logo */}
         <div className={styles.logoContainer}>
           <Image
             src="/prana-logo.png"
             alt="Prana Health Logo"
-            width={250}
-            height={90}
+            width={200}
+            height={70}
           />
         </div>
 
+        {/* Desktop Nav (Unchanged) */}
         <nav className={`${styles.nav} ${inter.className}`}>
           <Link href="/" className={styles.link}>
             Home
@@ -119,8 +128,110 @@ export default function Header() {
           </Link>
         </nav>
 
+        {/* CTA Button (Desktop Only) */}
         <Link href="/appointment" className={styles.button}>
           Request An Appointment
+        </Link>
+      </div>
+
+      {/* Side Menu */}
+      <div className={`${styles.sideMenu} ${isMenuOpen ? styles.open : ""}`}>
+        <button
+          className={styles.closeBtn}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          ✕
+        </button>
+        <Link href="/" onClick={() => setIsMenuOpen(false)}>
+          Home
+        </Link>
+
+        {/* Mobile Dropdown for Services */}
+        <div>
+          <p
+            onClick={() => setShowServices(!showServices)}
+            className={styles.mobileDropdownTitle}
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
+            Services{" "}
+            <span
+              style={{
+                marginLeft: 8,
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                src={showServices ? "/icons/up-arrow.png" : "/icons/down.png"}
+                alt={showServices ? "Collapse" : "Expand"}
+                width={16}
+                height={16}
+                style={{ verticalAlign: "middle" }}
+              />
+            </span>
+          </p>
+          {showServices && (
+            <div className={styles.mobileDropdownMenu}>
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  href={service.link}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {service.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Mobile Dropdown for Clinical Trials */}
+        <div>
+          <p
+            onClick={() => setShowTrials(!showTrials)}
+            className={styles.mobileDropdownTitle}
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
+            Clinical Trials
+            <span
+              style={{
+                marginLeft: 8,
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                src={showTrials ? "/icons/up-arrow.png" : "/icons/down.png"}
+                alt={showTrials ? "Collapse" : "Expand"}
+                width={16}
+                height={16}
+                style={{ verticalAlign: "middle" }}
+              />
+            </span>
+          </p>
+          {showTrials && (
+            <div className={styles.mobileDropdownMenu}>
+              {clinicalTrials.map((trial, index) => (
+                <Link
+                  key={index}
+                  href={trial.link}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {trial.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <Link href="/patient-portal" onClick={() => setIsMenuOpen(false)}>
+          Patient Portal
+        </Link>
+        <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+          Contact Us
+        </Link>
+        <Link href="/blogs" onClick={() => setIsMenuOpen(false)}>
+          Blogs
         </Link>
       </div>
     </header>
