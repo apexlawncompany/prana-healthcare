@@ -74,7 +74,7 @@
   border-radius: 30px;
   flex: 1 1 250px;
   max-width: 300px;
-  min-height: 420px;   /* Set a min-height for all cards */
+  min-height: 420px; /* Set a min-height for all cards */
   display: flex;
   flex-direction: column;
 }
@@ -105,7 +105,7 @@
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
-  margin-top: auto;           /* This keeps the button at the bottom */
+  margin-top: auto; /* This keeps the button at the bottom */
   border-radius: 50px;
   font-size: 1rem;
   font-weight: bold;
@@ -114,7 +114,7 @@
 
 .viewMoreBtn:hover {
   background-color: #fff;
-  color:#9c2c9c;
+  color: #9c2c9c;
   border: 2px solid #9c2c9c;
 }
 
@@ -173,4 +173,91 @@
 .collageList li strong {
   font-weight: 600;
   color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.2rem;
+  }
+  .cardContainer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .collageContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .collageImageWrapper,
+  .collageText {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .collageImage {
+    height: auto;
+  }
+  .sectionHeader > div:first-child {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 40vh;
+    min-height: 220px;
+    padding: 0;
+  }
+  .overlay {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .heroTitle {
+    font-size: 2rem;
+  }
+  .sectionHeader h1 {
+    font-size: 2rem;
+  }
+  .sectionHeader h3 {
+    font-size: 1rem;
+  }
+  .cardContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .card {
+    max-width: 100%;
+    min-width: 0;
+    min-height: 280px;
+    padding: 1em;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 0.95rem;
+  }
+  .viewMoreBtn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+  .collageSection {
+    padding: 1rem 0;
+  }
+  .collageTitle {
+    font-size: 1.2rem;
+  }
+  .collageIntro,
+  .collageList li {
+    font-size: 0.95rem;
+  }
+  .collageImage {
+    height: auto;
+  }
 }

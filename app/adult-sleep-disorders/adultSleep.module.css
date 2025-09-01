@@ -64,3 +64,49 @@
 .accordionSide h4 {
  color: #7f7f7f;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+  .imageSide, .accordionSide {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 40vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .overlay {
+    padding: 1rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+  }
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+  .infoSection {
+    padding: 2rem;
+  }
+  .infoImage {
+    width: 100%;
+    height:auto;
+  }
+  .textContent {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .accordionSide h4 {
+    font-size: 1rem;
+  }
+}
