@@ -10,6 +10,7 @@
 }
 
 .bgImage {
+  object-position: center;
   z-index: 1;
 }
 
@@ -124,4 +125,80 @@
 .collageList li strong {
   font-weight: 600;
   color: #000;
+}
+
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .collageContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .collageText {
+    padding: 2rem;
+  }
+  .collageImageWrapper,
+  .collageText {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .overlay {
+    padding: 2rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .contactOptions {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: stretch;
+    margin-top: 5px;
+  }
+  .call,
+  .onlieSchedule {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  .divider {
+    display: none;
+  }
+  .callDetails {
+    font-size: 1.1em;
+  }
+  .callDetails img {
+    width: 30px;
+    height: 30px;
+  }
+  .collageContent {
+    gap: 1rem;
+  }
+  .collageText {
+    padding: 1.5rem;
+  }
+  .collageTitle {
+    font-size: 1.2rem;
+  }
+  .collageIntro,
+  .collageList li {
+    font-size: 0.95rem;
+  }
+  .collageImage {
+    height: auto;
+    object-fit: cover;
+  }
+  .collageList {
+    padding-left: 1rem;
+  }
 }

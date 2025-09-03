@@ -100,3 +100,107 @@
   margin-bottom: 1rem;
   color: #92239f !important;
 }
+
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .infoSection {
+    padding: 2rem;
+  }
+  .sectionHeader {
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: nowrap;
+  }
+  .sectionHeader h1 {
+    font-size: 3rem;
+  }
+  .sectionHeader p {
+    font-size: 1.1rem;
+  }
+  .imageSide {
+    width: 100%
+  }
+  .headerImage {
+    width: 100%;
+    height: auto;
+  }
+  .accordionSide,
+  .imageSide,
+  .sectionHeader > div:first-child {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+  .contentWrapper1,
+  .contentWrapper2 {
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0;
+  }
+  .contentWrapper1 .accordionSide,
+  .contentWrapper2 .accordionSide {
+    order: 1;
+    width: 100%;
+  }
+  .contentWrapper1 .image,
+  .contentWrapper2 .image2 {
+    order: 2;
+    width: 100%;
+  }
+  .infoImage,
+  .infoImage2 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .bgImage {
+    object-position: right;
+  }
+  .infoSection {
+    padding: 1.5rem;
+  }
+  .sectionHeader {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .sectionHeader h1 {
+    font-size: 2.75rem;
+  }
+  .headerImage {
+    width: 100%;
+    height: auto;
+  }
+  .accordionSide,
+  .imageSide,
+  .sectionHeader > div:first-child {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+  .contentWrapper1,
+  .contentWrapper2 {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .contentWrapper1 .image,
+  .contentWrapper2 .image2 {
+    order: 2;
+  }
+  .contentWrapper1 .accordionSide,
+  .contentWrapper2 .accordionSide {
+    order: 1;
+  }
+  .infoImage,
+  .infoImage2 {
+    height: auto;
+  }
+}

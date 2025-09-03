@@ -166,6 +166,7 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .headerArea {
+    top:0;
     padding: 0;
     position: relative;
   }

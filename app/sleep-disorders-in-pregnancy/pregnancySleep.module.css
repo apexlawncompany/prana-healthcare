@@ -111,3 +111,75 @@
   margin-bottom: 1rem;
   color: black;
 }
+
+
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+  .infoSection {
+    padding: 2rem;
+  }
+  .infoImage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 100vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .overlay {
+    padding: 2rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+  .contactOptions {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: stretch;
+    margin-top: 5px;
+  }
+  .call,
+  .onlieSchedule {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  .divider {
+    display: none;
+  }
+  .callDetails {
+    font-size: 1.1em;
+  }
+  .callDetails img {
+    width: 30px;
+    height: 30px;
+  }
+  .infoSection {
+    padding: 1.5rem;
+  }
+  .infoImage {
+    width: 100%;
+    height: auto;
+  }
+  .textContent {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .accordionSide h4 {
+    font-size: 1rem;
+  }
+  .imageSide,
+  .accordionSide {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+}
