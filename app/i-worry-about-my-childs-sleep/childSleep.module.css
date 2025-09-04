@@ -85,3 +85,92 @@
   margin-bottom: 1rem;
   color: #92239f !important;
 }
+
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .infoSection {
+    padding: 2rem;
+  }
+  .sectionHeader {
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: nowrap;
+  }
+  .sectionHeader h1 {
+    font-size: 3rem;
+  }
+  .sectionHeader p {
+    font-size: 1.1rem;
+  }
+  .headerImage {
+    width: 100%;
+    height: auto;
+  }
+  .accordionSide,
+  .imageSide,
+  .image,
+  .sectionHeader > div:first-child {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+  .contentWrapper {
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0;
+  }
+  .contentWrapper .accordionSide {
+    order: 1;
+    width: 100%;
+  }
+  .contentWrapper .image {
+    order: 2;
+    width: 100%;
+  }
+  .infoImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .infoSection {
+    padding: 1.5rem;
+  }
+  .sectionHeader {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .sectionHeader h1 {
+    font-size: 2.75rem;
+  }
+  .headerImage {
+    width: 100%;
+    height: auto;
+  }
+  .infoImage {
+    height: auto;
+  }
+  .accordionSide, .imageSide, .image,
+  .sectionHeader > div:first-child {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+  .contentWrapper {
+    padding-right: 0;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .contentWrapper .image {
+    order: 2;
+  }
+  .contentWrapper .accordionSide {
+    order: 1;
+  }
+}

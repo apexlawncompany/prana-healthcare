@@ -61,3 +61,18 @@
 .link:hover .underlineText {
   background-size: 100% 2px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .imageWrapper{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+  .card {
+    padding: 0;
+  }
+}

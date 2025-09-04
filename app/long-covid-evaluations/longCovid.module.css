@@ -110,3 +110,44 @@
   font-weight: 500;
   color: #555;
 }
+
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+  .infoSection {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .overlay {
+    padding: 2rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+  .contentWrapper {
+    padding: 0;
+  }
+  .infoSection {
+    padding: 1.5rem;
+  }
+  .textContent {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .cardImage {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Locations from "@/components/Locations";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -291,7 +291,7 @@ export default function Home() {
                   Currently running clinical studies you can participate in.
                   Find help and contribute to medical research.
                 </p>
-                <button className={styles.cta}>I am interested</button>
+                <button className={styles.intrestedBtn}>I am interested</button>
               </div>
               <div className={styles.imageWrapper}>
                 <Image

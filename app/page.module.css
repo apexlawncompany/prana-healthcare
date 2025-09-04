@@ -1,11 +1,3 @@
-/* Swiper pagination dots color override */
-
-.midtestimonialSection :global(.swiper-pagination-bullet) {
-  background: #000 !important;
-}
-.midtestimonialSection :global(.swiper-pagination-bullet-active) {
-  background: #000 !important;
-}
 .heroSection,
 .expProvidersSection {
   position: relative;
@@ -66,7 +58,7 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -625,6 +617,13 @@
   padding: 2rem 2rem;
 }
 
+.midtestimonialSection :global(.swiper-pagination-bullet) {
+  background: #000 !important;
+}
+.midtestimonialSection :global(.swiper-pagination-bullet-active) {
+  background: #000 !important;
+}
+
 .sliderContainer {
   overflow: hidden;
   width: 100%;
@@ -695,44 +694,287 @@
   background: #888;
 }
 
-.dot:active{
+.dot:active {
   background: #000 !important;
 }
 
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .trialContent {
-    flex-direction: column;
-  }
-
-  .tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .page {
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 70vh;
+    min-height: 420px;
     padding: 2rem 1rem;
   }
 
-  .cardGrid {
-    gap: 1.5rem;
+  .heroContent {
+    padding: 2rem;
+    max-width: 90%;
+    text-align: center;
   }
 
   .heading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .helpCard,
+  .card {
+    padding: 1.2rem;
   }
 
   .button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .collageSection {
+    padding: 3rem 2rem;
+  }
+
+  .collageContent {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .collageImageWrapper,
+  .collageText {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .collageImage {
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .teamSection {
+    padding: 3rem 2rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .teamTitle {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .teamSubtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .serviceTitle {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .servicetabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .servicetab {
+    width: 160px;
+    padding: 32px 8px;
+    font-size: 1rem;
+  }
+
+  .servicetabContent {
+    padding: 3rem 2rem;
+  }
+
+  .servicetrialContent {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .servicetextContent {
+    max-width: 100%;
+  }
+
+  .serviceimageWrapper img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .testimonialSection {
+    padding: 3rem 2rem;
+  }
+
+  .testimonialOverlay blockquote {
+    font-size: 1.5rem;
+  }
+
+  .testimonialCard {
+    flex: 0 0 48%;
+    padding: 1rem;
+  }
+
+  .midtestimonialSection {
+    padding: 2rem 1rem;
+  }
+
+  .sliderContainer {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 60vh;
+    min-height: 340px;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heroContent {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .helpCard,
+  .card {
+    padding: 1rem;
+  }
+  .button {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
+  }
+  .collageSection {
+    padding: 2rem;
+  }
+  .collageTitle {
+    font-size: 2rem;
+  }
+  .collageSubtitle {
+    font-size: 1rem;
+  }
+
+  .clinicalSection {
+    padding: 2rem;
+  }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  .tab {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .tabContent {
+    padding: 1rem;
+  }
+  .trialContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .clinicalImage {
+    width: auto;
+    height: auto;
+  }
+  .textContent h3,
+  .servicetextContent h3 {
+    font-size: 1.5rem;
+  }
+  .textContent p,
+  .servicetextContent p {
+    font-size: 1rem;
+  }
+  .expProvidersTitle {
+    font-size: 2.5rem;
+  }
+  .teamSection {
+    padding: 2rem;
+  }
+  .teamTitle {
+    font-size: 2.7rem;
+  }
+  .teamSubtitle {
+    font-size: 1rem;
+  }
+  .serviceList {
+    display: inline-block;
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+  .serviceTitle {
+    font-size: 2.7rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .servicetabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .servicetab {
+    width: 140px;
+    padding: 24px 8px;
+    font-size: 0.85rem;
+  }
+  .servicetabContent {
+    padding: 2rem 1rem;
+  }
+  .serviceimageWrapper img {
+    max-width: 100%;
+  }
+  .testimonialSection {
+    padding: 2rem;
+    align-items: center;
+  }
+  .testimonialOverlay blockquote {
+    font-size: 1.3rem;
+  }
+  .testimonialOverlay,
+  .testimonialAuthor {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+  .watchStoryBtn {
+    border: 1px solid var(--color-white);
+    padding: 0.5rem;
+    margin-top: 20px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+  }
+  .midtestimonialSection {
+    padding: 1rem 0.2rem;
+  }
+  .testimonialCard {
+    flex: 0 0 100%;
+    padding: 0.5rem;
+  }
+  .sliderContainer {
+    padding: 0;
   }
 }

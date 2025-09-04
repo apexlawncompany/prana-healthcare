@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./notFound.module.css"; // Scoped CSS module// Your background image path
 import { Overlock } from "next/font/google";
+import Link from "next/link";
 
 const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
 

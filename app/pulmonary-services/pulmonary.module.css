@@ -51,7 +51,7 @@
 
 .sectionHeader h1 {
   font-size: 3rem;
-  color: black
+  color: black;
 }
 
 .contentWrapper {
@@ -62,8 +62,52 @@
   align-items: flex-start;
 }
 
-.accordionRightSide, .accordionSide {
+.accordionRightSide,
+.accordionSide {
   flex: 1;
   min-width: 300px;
 }
 
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .infoSection {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .overlay {
+    padding: 2rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+  .sectionHeader {
+    padding: 1.5rem;
+    margin-bottom: 0;
+  }
+  .sectionHeader h1 {
+    font-size: 2.5em;
+  }
+  .contentWrapper {
+    gap: 0;
+  }
+  .infoSection {
+    padding: 1.5rem;
+  }
+  .accordionSide h4 {
+    font-size: 1rem;
+  }
+  .accordionRightSide,
+  .accordionSide {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+}
