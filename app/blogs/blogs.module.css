@@ -17,12 +17,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark dim effect */
+  z-index: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
   color: white;
 }
@@ -33,7 +34,8 @@
 }
 
 .heroTitle {
-  font-size: 3rem;
+  color: White;
+  font-size: 3.2rem;
 }
 
 .blogContent {
@@ -145,9 +147,17 @@
   color: #111;
 }
 
-.categories p {
+.categoryLink {
+  display: block; /* makes each link full-width like <p> */
   font-size: 17px;
   padding: 12px 0;
   border-bottom: 1px solid #eee;
   letter-spacing: 0.8px;
+  color: #333; /* adjust to your theme */
+  text-decoration: none; /* remove underline */
+  transition: color 0.2s ease;
+}
+
+.categoryLink:hover {
+  color: #0070f3; /* highlight on hover */
 }
