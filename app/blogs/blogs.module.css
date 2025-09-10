@@ -1,0 +1,153 @@
+.main {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: white;
+}
+
+.textContent {
+  flex: 1;
+  color: black;
+}
+
+.heroTitle {
+  font-size: 3rem;
+}
+
+.blogContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.postCard {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.postImage {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.postInfo h1 {
+  font-size: 2.5rem;
+}
+
+.category {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.meta {
+  font-size: 1.5rem;
+}
+
+.excerpt {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.socialShare {
+  display: flex;
+  justify-content: space-between; /* left vs right */
+  align-items: center; /* vertical centering */
+  gap: 1rem; /* optional spacing */
+}
+
+.socialShare > div:first-child {
+  display: flex;
+  gap: 0.75rem; /* spacing between icons */
+}
+
+.readMore {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center; /* vertically align */
+  gap: 1.5rem; /* space between input and icon */
+}
+
+.searchBox input {
+  font-size: 17px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  flex: 1; /* take up remaining width */
+}
+
+.recentPosts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recentPosts li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.recentPosts img {
+  border-radius: 8px;
+}
+
+.recentPosts span {
+  font-size: 0.9rem;
+
+  text-transform: uppercase;
+}
+
+.smallImage {
+  object-fit: cover;
+}
+
+.recentPosts p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.categories p {
+  font-size: 17px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  letter-spacing: 0.8px;
+}
