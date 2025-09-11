@@ -223,7 +223,6 @@
   max-width: 50%;
   margin-bottom: 1rem;
   padding: 2rem;
-  border-bottom: 1px solid #eee;
 }
 
 .commentForm {
@@ -290,4 +289,47 @@
 .submitBtn:hover {
   background-color: #333;
 }
+
+.postNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-top: 1px solid #eee;
+  gap: 5rem;
+}
+
+.prevImg,
+.nextImg {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.postNavigation a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nextPost,
+.prevPost {
+  max-width: 40%;
+}
+
+.prevPost p,
+.nextPost p {
+  font-weight: 600;
+  margin: 0.3rem 0 0;
+}
+
+.navLabel {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 700;
+}
+
 

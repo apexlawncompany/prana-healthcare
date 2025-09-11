@@ -11,11 +11,17 @@ const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
 
 export default function BlogDetail() {
   const { id } = useParams();
-  const post = blogPosts.find((p) => p.id === id);
+  const postIndex = blogPosts.findIndex((p) => p.id === id);
+  const post = blogPosts[postIndex];
 
   if (!post) {
     return <p>Post not found.</p>;
   }
+
+  // Previous and Next posts
+  const prevPost = postIndex > 0 ? blogPosts[postIndex - 1] : null;
+  const nextPost =
+    postIndex < blogPosts.length - 1 ? blogPosts[postIndex + 1] : null;
 
   return (
     <main className={styles.main}>
@@ -65,6 +71,7 @@ export default function BlogDetail() {
           </Link>
         </div>
       </section>
+
       <section className={styles.leaveComment}>
         <h2 className={overlock.className}>Leave a Reply</h2>
         <br />
@@ -105,6 +112,52 @@ export default function BlogDetail() {
             Post Comment
           </button>
         </form>
+      </section>
+
+      {/* Previous / Next Navigation */}
+      <section className={styles.postNavigation}>
+        {prevPost && (
+          <div className={styles.prevPost}>
+            <Link href={`/blogs/${prevPost.id}`}>
+              <Image
+                src={prevPost.image}
+                alt={prevPost.title}
+                width={100}
+                height={100}
+                className={styles.prevImg}
+              />
+              <div>
+                <span className={styles.navLabel}>Previous</span>
+                <br />
+                <h2 className={`${overlock.className}`}>
+                  {prevPost.title}
+                </h2>
+                <br />
+              </div>
+            </Link>
+          </div>
+        )}
+        {nextPost && (
+          <div className={styles.nextPost}>
+            <Link href={`/blogs/${nextPost.id}`}>
+              <div>
+                <span className={styles.navLabel}>Next</span>
+                <br />
+                <h2 className={`${overlock.className}`}>
+                  {nextPost.title}
+                </h2>
+                <br />
+              </div>
+              <Image
+                src={nextPost.image}
+                alt={nextPost.title}
+                width={100}
+                height={100}
+                className={styles.nextImg}
+              />
+            </Link>
+          </div>
+        )}
       </section>
     </main>
   );
