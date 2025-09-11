@@ -1,0 +1,335 @@
+.main {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark dim effect */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+}
+
+.textContent {
+  flex: 1;
+  color: black;
+}
+
+.heroTitle {
+  color: White;
+  font-size: 3.2rem;
+}
+
+.blogContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.postCard {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.postImage {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.postInfo h1 {
+  font-size: 2.5rem;
+}
+
+.category {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.meta {
+  font-size: 1.5rem;
+}
+
+.excerpt {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.socialShare {
+  display: flex;
+  justify-content: space-between; /* left vs right */
+  align-items: center; /* vertical centering */
+  gap: 1rem; /* optional spacing */
+}
+
+.socialShare > div:first-child {
+  display: flex;
+  gap: 0.75rem; /* spacing between icons */
+}
+
+.readMore {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center; /* vertically align */
+  gap: 1.5rem; /* space between input and icon */
+}
+
+.searchBox input {
+  font-size: 17px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  flex: 1; /* take up remaining width */
+}
+
+.recentPosts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recentPosts li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.recentPosts img {
+  border-radius: 8px;
+}
+
+.recentPosts span {
+  font-size: 0.9rem;
+
+  text-transform: uppercase;
+}
+
+.smallImage {
+  object-fit: cover;
+}
+
+.recentPosts p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.categoryLink {
+  display: block; /* makes each link full-width like <p> */
+  font-size: 17px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  letter-spacing: 0.8px;
+  color: #333; /* adjust to your theme */
+  text-decoration: none; /* remove underline */
+  transition: color 0.2s ease;
+}
+
+.categoryLink:hover {
+  color: #0070f3; /* highlight on hover */
+}
+
+/* Post Specific Details Pages */
+
+.postDetail {
+  width: 100%;
+  padding: 10% 2rem 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.postTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #111;
+}
+
+.postContent {
+  line-height: 1.6;
+}
+
+.postContent p,
+.leaveComment p {
+  font-size: 1.1rem;
+  color: #7f7f7f;
+}
+
+.postContent h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #7f7f7f;
+}
+
+.postContent ul {
+  margin-left: 2rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.postContent a {
+  color: #000;
+}
+
+.postImageBig {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leaveComment {
+  max-width: 50%;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.commentForm input,
+.commentForm textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.commentForm textarea {
+  resize: vertical;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.checkboxGroup input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkboxGroup label {
+  font-size: 1.1rem;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+
+.submitBtn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #333;
+}
+
+.postNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-top: 1px solid #eee;
+  gap: 5rem;
+}
+
+.prevImg,
+.nextImg {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.postNavigation a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nextPost,
+.prevPost {
+  max-width: 40%;
+}
+
+.prevPost p,
+.nextPost p {
+  font-weight: 600;
+  margin: 0.3rem 0 0;
+}
+
+.navLabel {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 700;
+}
+
+

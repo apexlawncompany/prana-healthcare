@@ -117,7 +117,7 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/patient-portal" className={styles.link}>
+          <Link href="https://www.onpatient.com/login" className={styles.link} target="_blank" rel="noopener noreferrer">
             Patient Portal
           </Link>
           <Link href="/contact" className={styles.link}>
