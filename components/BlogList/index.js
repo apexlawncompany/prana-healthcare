@@ -36,22 +36,35 @@ export default function BlogList({ posts, title }) {
         <div className={styles.postsList}>
           {posts.map((post) => (
             <div key={post.id} className={styles.postCard}>
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={1000}
-                height={500}
-                className={styles.postImage}
-              />
-
+              <Link href={`/blogs/${post.id}`}>
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={1000}
+                  height={500}
+                  className={styles.postImage}
+                />
+              </Link>
               <div className={styles.postInfo}>
-                <span className={styles.category}>{post.category}</span>
-                <br />
-                <h1 className={`${overlock.className}`}>{post.title}</h1>
-                <br />
+                <Link href={`/category/${post.category.toLowerCase()}`}>
+                  <span className={styles.category}>{post.category}</span>
+                  <br />
+                </Link>
+                <Link href={`/blogs/${post.id}`}>
+                  <h1 className={`${overlock.className}`}>{post.title}</h1>
+                  <br />
+                </Link>
                 <p className={`${styles.meta} ${noto_serif.className}`}>
                   <em>
-                    {post.date} / by {post.author} / 💬 {post.comments}
+                    {post.date} / by {post.author} /{" "}
+                    <Image
+                      src="/icons/comment-bubble.png"
+                      alt="comments"
+                      width={22}
+                      height={24}
+                      style={{ verticalAlign: "middle", marginRight: "4px" }}
+                    />
+                    {post.comments}
                   </em>
                 </p>
                 <br />
@@ -129,24 +142,26 @@ export default function BlogList({ posts, title }) {
             <ul>
               {blogPosts.slice(0, 5).map((post) => (
                 <li key={post.id}>
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={80}
-                    height={70}
-                    className={styles.smallImage}
-                  />
-                  <div>
-                    <span>
-                      <strong>{post.date}</strong>
-                    </span>
-                    <p
-                      className={overlock.className}
-                      style={{ fontSize: "1.1rem" }}
-                    >
-                      {post.title}
-                    </p>
-                  </div>
+                  <Link href={`/blogs/${post.id}`}>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={80}
+                      height={70}
+                      className={styles.smallImage}
+                    />
+                    <div>
+                      <span>
+                        <strong>{post.date}</strong>
+                      </span>
+                      <p
+                        className={overlock.className}
+                        style={{ fontSize: "1.1rem" }}
+                      >
+                        {post.title}
+                      </p>
+                    </div>
+                  </Link>
                 </li>
               ))}
             </ul>

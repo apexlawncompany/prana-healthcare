@@ -60,6 +60,7 @@ export default function Header() {
             alt="Prana Health Logo"
             width={200}
             height={70}
+            className={styles.logoImg}
           />
         </div>
 
@@ -93,30 +94,6 @@ export default function Header() {
             )}
           </div>
 
-          <div
-            className={styles.dropdown}
-            onMouseEnter={() => setShowTrials(true)}
-            onMouseLeave={() => setShowTrials(false)}
-          >
-            <Link href="/clinical-trials" className={styles.link}>
-              Clinical Trials
-            </Link>
-            {showTrials && (
-              <div className={styles.menu}>
-                {clinicalTrials.map((trial, index) => (
-                  <div key={index}>
-                    <Link href={trial.link} className={styles.menuItem}>
-                      {trial.title}
-                    </Link>
-                    {index < clinicalTrials.length - 1 && (
-                      <hr className={styles.divider} />
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
           <Link href="https://www.onpatient.com/login" className={styles.link} target="_blank" rel="noopener noreferrer">
             Patient Portal
           </Link>
@@ -125,6 +102,9 @@ export default function Header() {
           </Link>
           <Link href="/blogs" className={styles.link}>
             Blogs
+          </Link>
+          <Link href="#" className={styles.link}>
+            Careers
           </Link>
         </nav>
 
