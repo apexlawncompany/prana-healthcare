@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  output: "export", // generate static HTML for GitHub Pages
+  // output: "export",
+  reactStrictMode: true,
+  distDir: "dist",
+  basePath: isProd ? "/prana-healthcare" : "",
   images: {
-    unoptimized: true, // GitHub Pages can't handle Next.js image optimizer
+    unoptimized: true,
   },
-  basePath: "/prana-healthcare", // 👈 replace with your repo name
-  assetPrefix: "/prana-healthcare/",
 };
 
 export default nextConfig;

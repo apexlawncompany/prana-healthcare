@@ -36,8 +36,8 @@
   gap: 1rem;
 }
 .logoImg {
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
   object-fit: cover;
 }
 
