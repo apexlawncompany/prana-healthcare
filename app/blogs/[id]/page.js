@@ -1,5 +1,4 @@
-"use client";
-import { useParams } from "next/navigation";
+// app/blogs/[id]/page.js
 import { blogPosts } from "@/src/data/blogsData";
 import styles from "../blogs.module.css";
 import Image from "next/image";
@@ -9,8 +8,15 @@ import { Overlock, Noto_Serif } from "next/font/google";
 const noto_serif = Noto_Serif({ subsets: ["latin"], weight: ["600"] });
 const overlock = Overlock({ subsets: ["latin"], weight: ["700"] });
 
-export default function BlogDetail() {
-  const { id } = useParams();
+// 👇 This makes Next.js pre-generate one static page per blog ID
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    id: post.id,
+  }));
+}
+
+export default function BlogDetail({ params }) {
+  const { id } = params;
   const postIndex = blogPosts.findIndex((p) => p.id === id);
   const post = blogPosts[postIndex];
 
@@ -27,7 +33,6 @@ export default function BlogDetail() {
     <main className={styles.main}>
       <section className={styles.postDetail}>
         <span className={styles.category}>{post.category}</span>
-        <br />
         <h1 className={`${overlock.className} ${styles.postTitle}`}>
           {post.title}
         </h1>
@@ -46,7 +51,6 @@ export default function BlogDetail() {
           className={styles.postImageBig}
         />
 
-        {/* Inject HTML content safely */}
         <div
           className={styles.postContent}
           dangerouslySetInnerHTML={{ __html: post.content }}
