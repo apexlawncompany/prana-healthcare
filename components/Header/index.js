@@ -103,7 +103,7 @@ export default function Header() {
           <Link href="/blogs" className={styles.link}>
             Blogs
           </Link>
-          <Link href="#" className={styles.link}>
+          <Link href="/careers" className={styles.link}>
             Careers
           </Link>
         </nav>
