@@ -15,7 +15,7 @@ export default function FloatingMenu() {
   };
 
   const handleDirectionClick = () => {
-    router.push("/contact");
+    router.push("/direction");
   };
 
   return (
