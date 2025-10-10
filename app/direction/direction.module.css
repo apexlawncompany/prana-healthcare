@@ -104,11 +104,7 @@
 
 /* Responsive Styles */
 @media (min-width: 701px) and (max-width: 1024px) {
-  .infoSection {
-    padding: 2rem;
-  }
   .servicesContent {
-    padding: 2rem;
     gap: 2rem;
     flex-wrap: nowrap;
   }
@@ -141,15 +137,21 @@
   .bgImage {
     object-position: right;
   }
-  .infoSection {
-    padding: 1.5rem;
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .servicesContainer {
+    padding: 5%;
   }
   .servicesContent {
     padding: 1rem;
     gap: 1rem;
   }
   .servicesContent h3 {
-    font-size: 2.75rem;
+    font-size: 2rem;
+  }
+  .servicesContent p {
+    font-size: 16px;
   }
   .imageArea {
     flex: unset;

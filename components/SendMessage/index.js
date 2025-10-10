@@ -15,7 +15,7 @@ export default function SendMessage() {
         {/* Left Clinic Info */}
         <div className={styles.infoSection}>
           <h1 className={`${styles.brand} ${overlock.className}`}>
-            Prana Health
+            Prana Health Care
           </h1>
           <br />
           <p className={`${styles.subtitle} ${noto_serif.className}`}>

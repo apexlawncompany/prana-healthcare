@@ -49,6 +49,7 @@ export default function Direction() {
                 management, breathing issues, and more. Our board-certified
                 providers offer the care you deserve
               </p>
+              <br />
 
               <p>
                 <strong>Primary Care:</strong> In Sanford Primary Care services
@@ -57,6 +58,7 @@ export default function Direction() {
                 Medicine physician and a Physician Assistant are available to
                 take care of your primary care needs.
               </p>
+              <br />
 
               <p>
                 <strong>Medicare &amp; Medicaid:</strong> Accepted Prana Health
@@ -65,12 +67,14 @@ export default function Direction() {
                 benefits are available for many of those plans which we do not
                 participate in.
               </p>
+              <br />
 
               <p>
                 <strong>Accepting New Patients:</strong> Prana Health is
                 accepting new patients for its primary care and specialty care
                 services with short waiting time to see a provider.
               </p>
+              <br />
             </div>
 
             <div className={styles.imageArea}>
@@ -110,9 +114,11 @@ export default function Direction() {
                 reactions. Depending on the allergen, you can have sneezing,
                 swollen eyes, or a runny nose.
               </p>
+              <br />
               <p>
                 <strong>How do we Test Allergies?</strong>
               </p>
+              <br />
               <p>
                 Skin prick testing can be done on pediatric and adult patients
                 and it is the most common allergy test performed. This test is
@@ -120,9 +126,11 @@ export default function Direction() {
                 will give you the opportunity to receive a diagnosis and
                 management plan during your appointment.
               </p>
+              <br />
               <p>
                 <strong>Full Allergy Testing and Therapy</strong>
               </p>
+              <br />
               <p>
                 Prana Health's staff can perform breathing tests and in-house
                 scopes, tailor an asthma education plan, and enroll your child
@@ -134,6 +142,7 @@ export default function Direction() {
                 as respiratory education with air quality testing within the
                 home.
               </p>
+              <br />
             </div>
           </div>
         </div>
@@ -144,6 +153,7 @@ export default function Direction() {
               <p>
                 <strong>Asthma</strong>
               </p>
+              <br />
               <p>
                 Asthma is a chronic lung disease which narrows and inflames your
                 airways. If you are having any cough, chest tightness,
@@ -152,9 +162,11 @@ export default function Direction() {
                 potential to complicate other health conditions, reduce quality
                 of life, and even be fatal when left untreated.
               </p>
+              <br />
               <p>
                 <strong>Pulmonary hypertension</strong>
               </p>
+              <br />
               <p>
                 Pulmonary hypertension is a condition characterized by high
                 blood pressure in the lungs. It can be caused by a variety of
@@ -166,6 +178,7 @@ export default function Direction() {
                 help slow the progression of the disease and improve quality of
                 life.
               </p>
+              <br />
             </div>
 
             <div className={styles.imageArea}>
@@ -200,13 +213,16 @@ export default function Direction() {
               <p>
                 <strong>Why Is Sleep So Important For Children?</strong>
               </p>
+              <br />
               <p>
                 "Children need to dream to be able to learn and they need to
                 learn to be able to dream."
               </p>
+              <br />
               <p>
                 <strong>Obstructive Sleep Apnea In Children</strong>
               </p>
+              <br />
               <p>
                 Children present symptoms for sleep apnea differently than
                 adults. Some symptoms can be heavy breathing, restless sleep,
@@ -218,9 +234,11 @@ export default function Direction() {
                 be greatly affected; causing a decline in their IQ more than
                 lead poisoning.
               </p>
+              <br />
               <p>
                 <strong>Behavior Problems In Children</strong>
               </p>
+              <br />
               <p>
                 When adults need rest, they look for a chance to take a nap,
                 however, children will generally compensate by forcing
@@ -229,6 +247,7 @@ export default function Direction() {
                 The child can be easily frustrated, frantic, and less likely to
                 consider the consequences of their actions.
               </p>
+              <br />
               <p>
                 If a child gets little to no sleep, it significantly impacts
                 their learning and their behavior. It can also manifest as ADHD,
@@ -248,6 +267,7 @@ export default function Direction() {
               <p>
                 <strong>What Is A Sleep Disorder?</strong>
               </p>
+              <br />
               <p>
                 A sleep disorder can be from abnormal sleeping patterns, or from
                 not getting enough or too much sleep. The transition of sleeping
@@ -296,9 +316,11 @@ export default function Direction() {
                 asthma triggers. Asthma interferes with day to day activities,
                 sports, school, and sleep.
               </p>
+              <br />
               <p>
                 <strong>What Are Symptoms of Asthma?</strong>
               </p>
+              <br />
               <p>
                 You or your child may experience one or more symptoms at a time
                 and can mistaken asthma as allergies, a chest cold, or
@@ -306,6 +328,7 @@ export default function Direction() {
                 that lingers for more than two weeks, wheezing, shortness of
                 breath, fatigue, chest congestion or tightness.
               </p>
+              <br />
               <p>
                 Any symptom of asthma must be taken seriously or it can worsen.
                 Some children grow out of their asthma, though it can continue
@@ -326,15 +349,16 @@ export default function Direction() {
               <p>
                 <strong>I am not the same since I had COVID</strong>
               </p>
-
+              <br />
               <p>
                 Find out more about the coronavirus comprehensive evaluations we
                 offer below
               </p>
-
+              <br />
               <p>
                 <strong>Long COVID - its symptoms</strong>{" "}
               </p>
+              <br />
               <p>
                 Long COVID, also known as post-acute sequelae of SARS-CoV-2
                 infection (PASC), refers to a range of symptoms that persist for
@@ -342,7 +366,9 @@ export default function Direction() {
                 symptoms can vary widely from person to person, and can affect
                 multiple organ systems.
               </p>
+              <br />
               <p>Common symptoms of long COVID include:</p>
+              <br />
               <ul>
                 <li>Fatigue and weakness</li>
                 <li>Shortness of breath</li>
@@ -359,7 +385,7 @@ export default function Direction() {
 
             <div className={styles.imageArea}>
               <Image
-                src="/servicesOptions/Direction-Service7.jpg" // 🔹 Replace with your actual image
+                src="/servicesOptions/Direction-Service7.jpg"
                 alt="Long Covid"
                 width={600}
                 height={400}
