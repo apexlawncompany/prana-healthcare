@@ -1,0 +1,161 @@
+.main {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: white;
+}
+
+.textContent {
+  flex: 1;
+  color: black;
+}
+
+.heroTitle {
+  font-size: 4.75rem;
+}
+
+.infoSection {
+  background-color: #fff;
+  color: #333;
+}
+
+.servicesHeading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.servicesContainer {
+  background-color: #fff8ee;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.servicesContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 75px;
+  flex-wrap: wrap;
+}
+
+.servicesContent p {
+  font-size: 1.1rem;
+  margin: 0.5rem auto 0;
+  line-height: 1.5;
+  color: #7f7f7f;
+}
+
+.servicesContent ul {
+  padding-left: 2.2rem;
+  margin: 0;
+  color: black;
+  line-height: 1.5;
+}
+
+.textArea {
+  flex: 1 1 500px;
+}
+
+.textArea h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.imageArea {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.servicesImage {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .servicesContent {
+    gap: 2rem;
+    flex-wrap: nowrap;
+  }
+  .servicesContent h3 {
+    font-size: 3rem;
+  }
+  .servicesContent p {
+    font-size: 1.1rem;
+  }
+  .imageArea {
+    width: 100%;
+  }
+  .servicesContent {
+    flex-direction: column;
+  }
+  .servicesHeading {
+    font-size: 2rem;
+  }
+  .textArea {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 80vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .bgImage {
+    object-position: right;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .servicesContainer {
+    padding: 5%;
+  }
+  .servicesContent {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .servicesContent h3 {
+    font-size: 2rem;
+  }
+  .servicesContent p {
+    font-size: 16px;
+  }
+  .imageArea {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+}

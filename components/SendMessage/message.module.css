@@ -1,4 +1,3 @@
-
 .contentSection {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -104,3 +103,32 @@
   background-color: #7b1fa2;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .contentSection {
+    padding: 5%;
+  }
+  .address {
+    gap: 0;
+  }
+  .verticalLine {
+    width: 0px;
+  }
+  .brand {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contentSection {
+    padding: 5%;
+  }
+  .address {
+    gap: 0;
+  }
+  .verticalLine {
+    width: 0px;
+  }
+  .brand {
+    font-size: 2.5rem;
+  }
+}
